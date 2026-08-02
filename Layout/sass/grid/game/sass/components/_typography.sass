@@ -1,0 +1,93 @@
+/* typography */ 
+
+// title
+.title
+  grid-column: 2 / -2
+  font-size: 45px
+  font-weight: 700
+  color: $color-lite-gray
+  padding-bottom: 30px
+  @include respond(tablet_900)
+    font-size: 35px
+  
+// caption
+.caption
+
+  &--advantages
+    font-size: 19px
+    font-weight: 700
+    color: $color-dark-green
+    padding-top: 13px
+
+  &--team
+    grid-column: 2 / -2
+    max-width: 580px
+    font-size: 40px
+    font-weight: 700
+    color: $color-lite-gray
+    padding-bottom: 30px
+
+  &--catalog
+    position: absolute
+    width: 100%    
+    max-width: 251px
+    top: 44%
+    left: 50%
+    text-align: center
+    transform: translateY(-44%)
+    transform: translateX(-50%)
+    font-weight: 700
+    white-space: nowrap
+    color: $color-white
+    text-align: center
+    padding: 17px
+    height: 50px
+    background-color: $color-dark-green
+
+
+// subject
+.subject
+
+  font-size: 19px
+  font-weight: 300    
+  color: $color-green
+  padding-bottom: 5px
+
+  &--banner
+    grid-column: 2 / -2
+  
+  &--team
+    grid-column: 2 / -2
+  
+  
+// descr
+.descr 
+
+  &--players    
+    font-weight: 300
+    color: $color-gray
+
+  &--advantages
+    line-height: 113%
+    color: $color-dark-green
+
+  &--team
+    grid-column: 2 / -2
+    max-width: 420px
+    line-height: 113%
+    color: $color-white
+    padding-bottom: 40px
+    
+  
+// text
+.text
+
+  &--catalog
+    font-weight: 300
+    color: $color-white
+
+.name
+  font-size: 19px
+  font-weight: 700
+  color: $color-lite-gray
+  align-self: end

@@ -1,0 +1,48 @@
+/* form-contacts */ 
+
+.form-contacts
+  grid-column: span 4
+  display: flex
+  flex-direction: column
+  @include respond(tablet_900)
+    grid-column: span 2
+  
+  &__subject
+    font-size: 24px
+    padding-bottom: 5px
+    @include respond(tablet_900)
+      padding-bottom: 7px
+  
+  &__descr
+    line-height: 138%
+    color: $color-lite-gray
+    padding-bottom: 14px
+    @include respond(tablet_900)
+      padding-bottom: 16px
+
+  &__input
+    margin-bottom: 20px
+    padding: 12px 23px
+    border: 1px solid transparent
+    background-color: $color-white-gray
+    transition: .3s all ease
+  
+    &::placeholder
+      font-size: 14px
+      color: $color-lite-gray
+  
+    &:hover
+      color: $color-orange
+  
+    &:focus
+      outline: none
+      border: 1px solid $color-orange
+  
+    &:focus:invalid
+      border: 1px solid #FF3030
+
+    &--message
+      height: 150px
+      resize: none
+    
+    

@@ -1,0 +1,41 @@
+/* stages */  
+
+.stages
+
+  &__wrap
+    display: flex
+    flex-direction: row-reverse
+    flex-wrap: wrap
+    justify-content: space-between
+    gap: 20px
+
+  &__descr    
+    flex: 1 1 380px
+
+  &__banner    
+    flex: 1 1 380px    
+    display: flex
+    justify-content: flex-end
+    min-height: 248px
+
+  &__descr-box
+    width: 100%
+    max-width: 700px
+    
+  &__banner-box
+    width: 100%
+    max-width: 870px
+    background: url(../img/stages__banner-box.jpg) center center / cover no-repeat
+    border-radius: 32px
+
+  &__btn-box
+    display: flex
+    width: 100%
+    max-width: 354px
+    justify-content: space-between
+    gap: 32px
+
+    @include respond(phone_600)
+      max-width: 100%
+      gap: 15px
+  

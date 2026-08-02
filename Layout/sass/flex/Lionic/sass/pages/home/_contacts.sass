@@ -1,0 +1,33 @@
+/* contacts */  
+
+.contacts
+  padding-bottom: 160px
+  @include respond(phone_600)
+    padding-bottom: 60px
+  
+  &__wrap 
+    width: 100%
+    max-width: 970px
+    gap: 30px
+    @include respond(phone_600)
+      flex-direction: column
+
+  &__box
+    width: 100%
+
+    &-map
+      max-width: 214px
+
+    &-phone
+      max-width: 214px
+    
+    &-mail
+      max-width: 170px
+
+    &-img
+      padding-bottom: 19px
+      @include respond(phone_600)
+        padding-bottom: 10px
+      svg
+        width: 29px
+        height: 29px

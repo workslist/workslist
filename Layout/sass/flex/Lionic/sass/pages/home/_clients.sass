@@ -1,0 +1,36 @@
+/* clients */  
+
+.clients
+  padding-bottom: 160px
+  @include respond(phone_600)
+    padding-bottom: 60px
+
+  &__wrap
+    gap: 30px
+    @include respond(phone_600)
+      flex-direction: column
+      gap: 15px
+  
+  &__cart
+    align-items: flex-end
+    border: 1px solid $color-gray-bor
+    border-radius: 5px
+    padding: 51px 36px 32px
+    @include respond(laptop_1240)      
+      padding: 20px
+
+    &-box
+      width: 100%
+      min-width: 230px
+      @include respond(laptop_1240)
+        max-width: 100%
+
+    &-person
+      gap: 15px
+      padding-top: 25px
+
+    &-img
+      img
+        width: 71px
+        height: 71px
+        

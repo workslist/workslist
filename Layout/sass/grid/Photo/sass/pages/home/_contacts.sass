@@ -1,0 +1,67 @@
+/* contacts */  
+
+.contacts
+  margin-bottom: 68px
+  @include respond(phone_600)
+    margin-bottom: 50px
+
+  &__group
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    gap: 30px
+    @include respond(tablet_900)
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 472px 1fr
+    @include respond(phone_600)
+      gap: 23px
+
+  &__banner
+    grid-column: span 8
+    align-content: end
+    padding-right: 250px
+    background: url(../img/contacts_map.jpg) top right / cover no-repeat
+    @include respond(tablet_900)
+      grid-column: span 2
+      padding-right: 0
+  
+  &__content
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
+    height: 100%
+    width: 100%
+    max-width: 410px
+    background: rgba(32, 32, 32, 0.85)
+    @include respond(tablet_900)
+      max-width: 100%
+      height: fit-content      
+    &-group
+      width: 100%
+      max-width: 336px
+      padding: 26px 18px 150px
+      @include respond(tablet_900)
+        max-width: 100%
+        padding-bottom: 14px
+  
+  &__phone
+    width: fit-content
+    &-link
+      display: flex
+      align-items: center
+      gap: 2px    
+    svg
+      width: 22px
+      height: 22px
+      fill: $color-orange
+      transition: .3s all ease
+    
+    &:hover 
+      svg
+        fill: $color-black-orange
+      
+    &:active 
+      svg
+        fill: $color-dark-orange
+

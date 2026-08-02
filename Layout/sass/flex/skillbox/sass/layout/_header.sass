@@ -1,0 +1,29 @@
+/* header */  
+
+.header
+  align-items: center
+  padding: 28px 0 30px
+  background-color: $color-blue
+  @include respond(phone_600)
+    padding: 25px 0
+
+  &__container
+    gap: 25px
+    @include respond(phone_600)
+      flex-direction: column
+
+  &__logo
+    width: 94px
+    height: 21px
+    svg
+      width: 94px
+      height: 21px
+
+  &__nav
+    flex: 1
+
+  &__list
+    justify-content: flex-end
+    gap: 20px 56px
+    @include respond(phone_600)
+      justify-content: flex-start

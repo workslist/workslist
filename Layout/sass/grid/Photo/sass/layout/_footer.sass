@@ -1,0 +1,73 @@
+/* footer */  
+
+.footer
+  padding: 24px 0 16px
+  background-color: $color-black
+  @include respond(phone_600)
+    padding: 31px 0 0
+
+  &__container
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    gap: 30px
+    @include respond(tablet_900)
+      grid-template-columns: repeat(6, 1fr)
+    @include respond(phone_600)
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr 1fr
+      padding: 0
+
+  &__logo
+    grid-column: span 4
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 3px
+    svg
+      width: 191px
+      height: 31px
+    @include respond(phone_600)
+      grid-column: span 2
+      grid-row: 2 / 3
+      padding: 14px 15px
+      align-items: center
+      background-color: $color-dark-gray
+
+  &__descr
+    grid-column: span 5
+    @include respond(tablet_900)
+      display: none
+  
+  &__group
+    grid-column: span 3
+    height: fit-content
+    font-size: 0
+    margin-left: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 8px
+    @include respond(tablet_900)
+      grid-column: span 2
+    @include respond(phone_600)
+      grid-row: 1 / 2
+      margin-left: 0
+
+  &__soc
+    display: flex
+    gap: 20px
+
+  &__soc1, &__soc2
+    svg
+      width: 30px
+      height: 30px
+      fill: $color-gray
+      transition: .3s all ease
+    
+    &:hover 
+      svg
+        fill: $color-orange
+        
+    &:active 
+      svg
+        fill: $color-dark-orange

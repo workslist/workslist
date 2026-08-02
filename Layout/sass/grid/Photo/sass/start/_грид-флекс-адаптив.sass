@@ -1,0 +1,65 @@
+// max-width
+
+  // Родительский бокс
+text-align: center
+
+  // Дочерний бокс
+display: inline-block
+width: 100%
+max-width: 1750px
+padding: 100px 70px
+text-align: left
+  
+// grid
+
+// grid 1
+qgrid-template-rows: min-content
+grid-template-columns: minmax(110px, 225px) 1fr min-content
+
+// Перестроение на ширене xxxPX
+display: grid
+grid-template-columns: repeat(auto-fit, minmax(500px, 1fr))
+gap: 32px
+  
+
+  
+  
+  
+  
+// flex
+
+// Обратное перестроение
+  
+  // Родитель
+display: flex
+flex-direction: row-reverse
+flex-wrap: wrap
+justify-content: space-between
+gap: 20px
+
+  // Дочерний 1
+flex: 1 1 380px
+  // Дочерний 2
+flex: 1 1 380px
+
+// FOrm
+
+<label for="username">Имя пользователя:</label>
+
+// grid
+
+grid-template-columns: repeat(4, 1fr)
+grid-template-columns: 191px 1fr minmax(25px, 78px)
+
+grid-template-rows: repeat(4, 1fr)
+grid-template-rows: auto 1fr
+
+grid-column: span 1
+grid-column: num / num
+grid-row: span 2
+grid-row: num / num
+
+
+
+grid-template-areas: "name name name"
+grid-area: name

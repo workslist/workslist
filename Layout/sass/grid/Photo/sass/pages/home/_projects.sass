@@ -1,0 +1,97 @@
+/* projects */  
+
+.projects
+  margin-bottom: 68px
+  @include respond(phone_600)
+    margin-bottom: 50px
+
+  &__group
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-template-rows: auto 1fr
+    gap: 30px
+    @include respond(laptop_1240)
+      grid-template-columns: repeat(6, 1fr)
+    @include respond(phone_600)
+      grid-template-columns: repeat(2, 1fr)
+      gap: 25px
+
+  
+  &__card
+    position: relative
+    display: flex
+    flex-direction: column
+
+    &--min
+      grid-column: span 2
+      grid-row:  span 1
+      @include respond(phone_600)
+        grid-column: span 2
+
+    &--max
+      grid-column: span 3
+      grid-row:  span 1
+      @include respond(phone_600)
+        grid-column: span 2
+  
+    &-group
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 100%
+      gap: 13px
+      @include respond(phone_600)
+        gap: 10px
+
+  &__banner
+    grid-column: span 6
+    grid-row:  span 1
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 22px 30px 30px
+    gap: 16px
+    @include respond(laptop_1240)
+      min-height: 422px
+    @include respond(phone_600)
+      grid-column: span 2
+      justify-content: flex-end
+
+    &--fill1
+      background: url(../img/projects__banner1.jpg) center / cover no-repeat
+
+    &--fill2
+      background: url(../img/projects__banner2.jpg) center / cover no-repeat
+
+    &--end
+      @include respond(laptop_1240)
+        grid-row: 4 / 5
+      @include respond(phone_600)
+        grid-row: 7 / 8
+
+  &__content
+    width: 100%
+    max-width: 293px
+
+  &__img
+    width: 100%
+    padding-bottom: 18px
+
+  &__date
+    display: flex 
+    align-items: center
+    gap: 4px     
+
+    svg
+      fill: $color-lite-gray
+      width: 14px
+      height: 14px
+
+    &--banner
+      padding-bottom: 2px
+      svg
+        fill: $color-white
+      @include respond(phone_600)
+        padding-bottom: 7px
+    

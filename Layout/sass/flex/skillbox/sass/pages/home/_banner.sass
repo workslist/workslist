@@ -1,0 +1,27 @@
+/* banner */  
+
+.banner
+  background: radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%)
+
+  &__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 18px
+
+  &__group
+    max-width: 459px
+    padding: 130px 0
+
+    @include respond(tablet_900)
+      max-width: 100%
+
+    @include respond(phone_600)
+      padding: 50px 0
+    
+  &__img
+    img
+      width: 100%
+      max-width: 632px
+    @include respond(tablet_900)
+      display: none

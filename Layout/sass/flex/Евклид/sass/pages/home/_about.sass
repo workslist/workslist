@@ -1,0 +1,47 @@
+/* about */  
+
+.about
+
+  &__wrap
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr))
+    gap: 32px
+
+    @include respond(phone_600)
+      grid-template-columns: 1fr
+
+
+  &__banner
+    display: flex
+    align-items: flex-end
+    height: 100%
+    min-height: 620px
+    border-radius: 32px
+    background: url(../img/about__box_banner.jpg) top center / cover no-repeat
+
+    @include respond(phone_600)
+      min-height: 460px
+
+  &__wrap-banner
+    width: 100%    
+    background-color: $bg-lite-black
+    border-radius: 32px
+    justify-items: center
+
+  &__box-banner
+    display: flex
+    flex-wrap: wrap
+    min-height: 196px
+    width: 100%
+    max-width: 808px
+    padding: 20px
+    gap: 20px
+    justify-content: space-between
+    align-items: center
+
+  &__list
+    display: flex
+    flex-direction: column
+    gap: 32px   
+
+  

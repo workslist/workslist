@@ -1,0 +1,26 @@
+/* about */  
+
+.about
+  padding: 30px 0 69px
+  background-color: $color-black
+  margin-bottom: 68px
+  @include respond(phone_600)
+    margin-bottom: 50px
+    padding: 32px 0 60px
+  
+  &__group
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: minmax(255px, 1fr) auto
+    gap: 25px 30px
+    @include respond(tablet_900)
+      grid-template-columns: 1fr
+      grid-template-rows: auto 278px auto
+      gap: 18px
+
+  &__image
+    grid-column: span 1
+    grid-row: span 1
+    background: url(../img/about_image.jpg) center / cover no-repeat
+    margin-bottom: 18px
+  

@@ -1,0 +1,49 @@
+/* form-email */ 
+
+.form-email
+  grid-column: span 1
+  grid-row: span 1
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  gap: 16px 30px
+  @include respond(phone_600)
+    flex-direction: column
+    align-items: flex-start
+    gap: 0
+
+  &__label
+    width: 100%
+    font-family: TTFirsNeue
+    font-size: 24px        
+    color: $color-white
+    @include respond(phone_600)
+      padding-bottom: 13px  
+
+  &__input
+    flex: 1
+    min-width: 345px
+    min-height: 52px
+    padding: 0 23px
+    background-color: $color-dark-gray
+    color: $color-white
+    border: 1px solid transparent
+  
+    transition: .3s all ease
+    @include respond(phone_600)
+      width: 100%
+      margin-bottom: 19px
+      min-height: 42px
+  
+    &::placeholder
+      color: $color-gray
+  
+    &:hover
+      color: $color-orange
+      outline: none
+  
+    &:focus
+      outline: none
+
+    &:focus:invalid
+      border-color: #F06666

@@ -1,0 +1,25 @@
+/* banner */ 
+
+.banner
+
+  &__wrap
+    text-align: center
+    background: url(../img/banner_bg.jpg) center / cover no-repeat
+    border-radius: 32px
+
+    @include respond(phone_600)
+      background: url(../img/banner_bg_900.jpg) center right / cover no-repeat
+
+  &__box
+    display: inline-block
+    width: 100%
+    max-width: 1750px
+    padding: 100px 70px
+    text-align: left
+
+    @include respond(tablet_900)
+      padding: 160px 40px
+
+    @include respond(phone_600)
+      padding: 60px 20px
+      text-align: center

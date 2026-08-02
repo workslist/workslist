@@ -1,0 +1,46 @@
+/* team */  
+
+.team
+  display: grid
+  grid-template-columns: 52% 48%
+  background-color: $color-dark-blue
+  @include respond(tablet_900)
+    grid-template-columns: 1fr
+
+  &__banner
+    grid-column: 1 / 2
+    display: grid
+    justify-content: end
+    grid-template-columns: minmax(50px, 111px) minmax(30px, 149px) minmax(180px, 340px) minmax(50px, 111px)
+    grid-template-rows: 65px repeat(3, auto) 65px
+    background: url(../img/team_bg.png) center / cover no-repeat
+    @include respond(tablet_900)
+      grid-template-columns: 50px 40px 1fr 50px
+      grid-template-rows: 50px repeat(3, auto) 50px
+
+    
+  &__banner1
+    display: block
+    width: 100%
+    grid-column: 2 / 4
+    grid-row: 2 / 4
+    
+  &__banner2
+    display: block
+    width: 100%    
+    grid-column: 3 / 5
+    grid-row: 3 / 5
+    transform: translateX(49px)    
+    @include respond(tablet_900)
+      transform: translateX(0)
+
+  &__content
+    display: grid
+    align-content: center
+    padding: 60px 0
+    grid-template-columns: minmax(60px, 80px) 1fr minmax(30px, 50px)
+    @include respond(tablet_900)
+      grid-template-columns: 25px 1fr 25px
+
+    
+      

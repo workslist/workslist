@@ -1,0 +1,28 @@
+/* header */  
+
+.header
+  display: grid
+  justify-content: center
+  background-color: $color-dark-green
+  padding-top: 36px
+  cursor: pointer
+  @include respond(tablet_900)
+    justify-content: end
+    align-items: center
+    padding: 0 26px
+
+  &__icon
+    background-color: $color-white
+    width: 50px
+    height: 1px
+    &::before, &::after
+      display: block
+      content: ""
+      background-color: $color-white
+      width: 50px
+      height: 1px
+    &::before
+      transform: translateY(-10px)
+    &::after
+      transform: translateY(10px)
+      

@@ -1,0 +1,42 @@
+/* header */  
+
+.header
+  margin-bottom: 50px
+  padding: 14px 0
+  border-radius: 0 0 32px 32px
+  background-color: $color-white
+  box-shadow: 0 5px 4px 0 rgba(0, 0, 0, 0.1)
+
+  @include respond(phone_600)
+    margin-bottom: 20px
+
+  &__box
+    
+    &_search
+      text-align: right
+
+  &__nav
+    @include respond(tablet_900)
+      overflow-x: auto
+      overflow-y: hidden
+      grid-row: 2/3
+      grid-column: 1/-1
+
+  &__list
+    display: flex
+    width: 100%
+    max-width: 615px
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
+    margin-left: auto
+    gap: 10px
+
+    @include respond(tablet_900)
+      max-width: 100%
+      justify-content: start
+      padding-bottom: 20px
+      flex-wrap: nowrap
+      gap: 24px
+
+    

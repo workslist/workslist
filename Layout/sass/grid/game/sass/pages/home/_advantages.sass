@@ -1,0 +1,25 @@
+/* advantages */  
+
+.advantages
+  max-width: 1300px
+  margin: 0 auto
+  display: grid
+  padding: 150px 25px
+  grid-template-columns: repeat(auto-fit, minmax(200px, 360px))
+  justify-content: center  
+  gap: 30px 40px
+  svg
+    grid-row: span 2
+    width: 45px
+    height: 45px
+  @include respond(tablet_900)
+    padding: 50px 25px
+    grid-template-columns: 1fr
+  
+  &__card
+    display: grid
+    grid-template-columns: 45px 1fr
+    gap: 15px 25px
+  
+
+  

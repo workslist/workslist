@@ -1,0 +1,14 @@
+.body
+  display: grid
+  grid-template-columns: 80px 1fr
+  grid-template-rows: auto auto
+  @include respond(tablet_900)
+    grid-template-columns: 1fr
+    grid-template-rows: 80px auto auto
+
+.header
+  grid-column: span 1
+  grid-row: 1 / -1
+  @include respond(tablet_900)
+    grid-row: span 1
+

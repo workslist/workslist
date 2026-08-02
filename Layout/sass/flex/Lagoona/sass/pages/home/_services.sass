@@ -1,0 +1,62 @@
+/* services */  
+
+.services
+
+  &__wrap
+    gap: 24px
+
+  &__box
+    flex: 1 1 calc( 50% - 24px )
+    min-width: 360px
+    border-radius: 15px
+    overflow: hidden
+    background-color: $color-white
+    @include respond(phone_600)
+      min-width: 300px
+
+    .services__link, .no-wrap
+      vertical-align: middle
+      font-size: 20px
+      font-weight: 500
+      color: $color-yellow
+      
+      transition: .3s all ease
+    svg     
+      vertical-align: middle 
+      margin-left: 8px
+      transition: .3s all ease
+      width: 10px
+      height: 17px
+      stroke: $color-yellow
+      fill: none
+  
+    &:hover 
+      .services__link, .no-wrap
+        color: $color-lite-yellow
+
+      svg
+        margin-left: 15px
+        stroke: $color-lite-yellow
+    
+    &:active 
+      .services__link, .no-wrap      
+        color: $color-dark-yellow
+      svg
+        margin-left: 8px
+        stroke: $color-dark-yellow
+    
+  &__img
+    width: 100%
+
+  &__content
+    display: flex
+    flex-direction: column
+    gap: 20px
+    max-width: 85%
+    padding: 26px 0 35px
+    @include respond(phone_600)
+      max-width: 100%
+      padding-left: 15px
+      padding-right: 15px
+
+

@@ -1,0 +1,90 @@
+/* footer */  
+
+.footer
+
+  &__wrap
+    background-color: $color-dark-gray
+    border-radius: 15px
+
+  &__size
+    margin: 0 auto
+    width: 100%
+    max-width: 1110px
+    padding: 45px 15px 0
+    gap: 15px
+
+    @include respond(phone_600)
+      padding-top: 25px
+  
+  &__box
+    flex: 1
+    gap: 15px
+
+    @include respond(phone_600)
+        flex-direction: column
+    
+    
+  &__text
+    flex: 1
+    max-width: 407px
+    min-width: 280px
+    padding-bottom: 22px
+    gap: 37px    
+
+    @include respond(phone_600)
+      gap: 15px
+      padding-bottom: 0
+      min-width: auto
+    
+  &__contacts
+    flex: 1
+    max-width: 618px
+    min-width: 315px
+    gap: 15px
+
+    @include respond(phone_600)
+      min-width: auto
+
+    &-box
+      gap: 15px
+      min-height: 250px
+
+      @include respond(phone_600)
+        min-height: 150px
+
+  &__link
+    gap: 15px
+
+    &-box
+      gap: 2px
+
+  &__soc
+    width: 25px
+    gap: 20px
+
+    &-icon
+      svg
+        width: 25px
+        height: 25px
+        transition: .3s all ease
+        fill: $color-lite-gray
+      
+      &:hover 
+        svg
+          fill: $color-yellow
+        
+      &:active 
+        svg
+          fill: $color-dark-yellow
+          
+
+  &__img
+    align-self: flex-end
+    
+    @include respond(phone_600)
+      padding-top: 20px
+
+    img
+      width: 100%
+      max-width: 254px
+      vertical-align: bottom

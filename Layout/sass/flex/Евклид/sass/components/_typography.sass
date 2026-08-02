@@ -1,0 +1,72 @@
+/* typography */ 
+
+.title
+  max-width: 837px
+  margin-bottom: 24px  
+  @include font-70-800
+  color: $color-white
+
+  @include respond(tablet_900)
+    margin-bottom: 16px
+    @include font-50-800
+
+  @include respond(phone_600)
+    margin-bottom: 6px
+    @include font-30-800
+
+.caption
+  margin-bottom: 20px
+  @include font-48-400
+
+  @include respond(phone_600)
+    @include font-38-400
+
+  &_footer
+    color: $color-lite-gray
+    margin-bottom: 25px
+
+.subject
+  @include font-24-700
+  color: $color-black
+  margin-bottom: 8px
+
+.descr
+
+  &_banner
+    max-width: 837px
+    margin-bottom: 90px    
+    @include font-24-700
+    color: $color-white
+
+    @include respond(tablet_900)
+      margin-bottom: 60px
+      @include font-18-700
+    
+    @include respond(phone_600)
+      margin-bottom: 32px
+
+  &_about-banner
+    @include font-16-700
+    color: $color-white
+    max-width: 433px
+    
+
+  &_footer
+    color: $color-lite-gray
+
+  &_lh200
+    line-height: 200%
+  
+  &_about
+    max-width: 1235px
+    margin-bottom: 50px
+  
+  &_about-item1
+    max-width: 400px
+    @include respond(tablet_900)
+      max-width: 100%
+    
+    @include respond(phone_600)
+      margin-bottom: 32px
+    
+   

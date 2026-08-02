@@ -1,0 +1,91 @@
+/* typography */ 
+
+// title
+.title
+  font-size: 60px
+  font-weight: 700
+  color: $color-white
+  padding-bottom: 30px
+  @include respond(phone_600)
+    font-size: 30px
+    padding-bottom: 15px
+
+  
+// caption
+.caption
+  font-size: 40px
+  font-weight: 700
+
+  &--advantages
+    padding-bottom: 30px
+    color: $color-lite-black
+    @include respond(phone_600)      
+      padding-bottom: 15px
+
+  &--teachers
+    padding-bottom: 30px
+    color: $color-white
+
+  &--courses
+    padding-bottom: 30px
+    color: $color-lite-black
+
+
+  
+  @include respond(phone_600)
+    font-size: 20px
+
+
+// subject
+.subject
+
+  &--teachers
+    font-size: 18px
+    font-weight: 700
+    line-height: 150%
+    color: $color-white
+    padding-bottom: 15px
+
+  &--courses
+    font-size: 18px
+    font-weight: 700
+    line-height: 150%
+    color: $color-dark-black
+    padding-bottom: 15px
+  
+  
+// descr
+.descr 
+
+  &--banner
+    font-size: 18px
+    line-height: 150%
+    color: $color-white
+    padding-bottom: 70px
+    @include respond(phone_600)
+      padding-bottom: 50px
+
+  &--advantages-content
+    line-height: 150%
+    color: $color-gray
+
+  &--advantages-cards
+    flex: 1
+    line-height: 120%
+    font-weight: 700
+    color: $color-gray
+
+  &--teachers
+    line-height: 150%
+    color: $color-lite-gray
+
+  &--courses
+    line-height: 150%
+    color: $color-gray
+    padding-bottom: 32px
+
+    
+  
+// text
+.text
+

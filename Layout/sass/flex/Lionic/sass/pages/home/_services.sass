@@ -1,0 +1,48 @@
+/* services */  
+
+.services
+  padding-bottom: 160px
+  
+  &__wrap
+    gap: 30px
+    @include respond(phone_600)
+      gap: 20px
+      flex-direction: column
+
+  &__box
+    flex: 1
+    gap: 30px
+
+    @include respond(phone_600)
+      gap: 16px
+
+  &__cart
+    width: 100%
+    min-width: 180px
+    border: 1px solid $color-gray-bor
+    border-radius: 5px
+    padding: 61px 15px 62px
+
+    &-wrap
+      width: 100%
+      max-width: 210px
+      margin: 0 auto
+      text-align: center
+
+    &-img
+      padding-bottom: 29px
+      svg
+        width: 86px
+        height: 66px
+      @include respond(phone_600)
+        padding-bottom: 15px
+        svg
+          width: 56px
+          height: 43px
+
+    @include respond(phone_600)
+      padding: 15px
+      min-width: 100px
+      
+  @include respond(phone_600)
+    padding-bottom: 60px

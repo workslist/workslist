@@ -1,0 +1,96 @@
+/* footer */  
+
+.footer
+  @include respond(phone_600)
+    &::after
+      position: relative
+      display: block
+      content: ""
+      border-top: 1px solid $color-gray
+      bottom: 48.6px     
+
+  &__container
+    align-items: center
+    padding-top: 45px
+    padding-bottom: 45px
+    gap: 30px
+    @include respond(phone_600)
+      padding-top: 30px
+      padding-bottom: 15px
+
+  &__group
+    flex: 1
+    color: $color-white 
+    min-width: 300px    
+
+    &--logo      
+      flex-shrink: 1
+      max-width: 367px
+      align-items: center
+      @include respond(phone_600)
+        flex-direction: column
+        max-width: 100%
+        gap: 30px
+
+    &--menu
+      flex: 1
+      justify-content: flex-end
+      gap: 30px
+      @include respond(phone_600)
+        flex-direction: column
+        justify-content: flex-start
+
+  &__logo
+    width: 100%
+    max-width: 135px
+    svg
+      width: 115px
+      height: 44px
+    @include respond(phone_600)
+      margin-right: auto
+
+  &__text
+    flex: 1
+    min-width: 222px
+    padding: 10px 0
+    @include respond(phone_600)
+      position: relative
+      padding: 15px 0 0
+
+  &__nav
+    flex: 1
+    max-width: 584px
+  
+  &__list
+    justify-content: flex-end
+    min-width: 260px
+    gap: 15px 28px
+    @include respond(phone_600)
+      justify-content: flex-start
+
+  &__item
+      
+
+  &__soc
+    display: flex
+    justify-content: flex-end
+    width: 123px
+    gap: 32px
+    @include respond(phone_600)
+      justify-content: flex-start
+  
+  &__icon1
+    svg
+      width: 24px
+      height: 18px
+      stroke: $color-black-icon
+      transition: .3s all ease
+
+    &:hover
+      svg
+        stroke: $color-lite-blue
+
+    &:active
+      svg
+        stroke: $color-dark-blue
+        

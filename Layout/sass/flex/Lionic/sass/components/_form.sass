@@ -1,0 +1,168 @@
+/* form */ 
+
+.form-feedback
+  gap: 19px
+  @include respond(phone_600)
+    gap: 15px
+
+  &__wrap
+    gap: 19px
+    @include respond(phone_600)
+      flex-direction: column
+      gap: 15px
+    &-btn
+      width: 100%
+      max-width: 230px
+      margin-left: auto
+      align-items: center
+      gap: 9px
+      @include respond(phone_600)
+        margin: 0 auto
+        max-width: 100%
+
+  &__box
+    flex: 1
+    gap: 19px
+    min-width: 380px
+    @include respond(phone_600)
+      min-width: 250px
+      gap: 15px
+
+    &-inputs
+      gap: 19px
+      @include respond(phone_600)
+        flex-direction: column
+        gap: 15px
+
+  &__input, &__items-select
+    flex: 1
+    min-width: 238px
+    padding: 15px 28px 16px
+    border: 1px solid $color-gray
+    border-radius: 50px
+    font-size: 16px
+    line-height: 180%
+    color: $color-black
+    background-color: $color-white
+    transition: .3s all ease
+  
+    &::placeholder
+      font-size: 16px
+      line-height: 180%
+      color: $color-lite-gray
+  
+    &:hover
+      border-color: $color-lite-blue
+  
+    &:focus
+      outline: none
+      border-color: $color-lite-blue
+      background-color: $color-background-blue
+    
+    &:active
+      border-color: $color-border-dark-blue
+  
+    &:focus:invalid
+      border-color: $color-red
+
+    &-box
+      flex: 1
+    
+    &-element
+      width: 100%
+
+    &-message
+      border-radius: 20px
+      resize: none
+      // height: 100%
+      min-height: 140px
+      @include respond(phone_600)
+        min-height: 240px
+
+  &__list
+    flex: 1  
+  
+  &__items
+    
+    position: relative
+  
+    &::after
+      content: ""
+      display: block
+      position: absolute
+      top: 50%
+      right: 28px
+      width: 12px
+      height: 7px
+      transform: translateY(-50%)
+      background: url("../img/form_arrow.svg") center / contain no-repeat
+      pointer-events: none
+  
+    &-select
+      width: 100%      
+      appearance: none    
+      cursor: pointer
+      font-size: 16px
+      line-height: 180%
+      color: $color-lite-gray     
+      
+      &:focus
+        outline: none
+        border-color: $color-lite-blue
+  
+  &__btn    
+    width: 100%
+    padding: 20px
+    font-size: 15px
+    line-height: 20px
+    font-weight: 600
+    text-align: center
+    color: $color-white
+    text-transform: uppercase
+    background-color: $color-blue
+    border-radius: 50px
+    transition: .3s all ease
+
+    &:hover
+      background-color: $color-lite-blue
+    
+    &:active
+      background-color: $color-active-dark-blue  
+  
+  &__checked
+    position: absolute
+    opacity: 0
+    width: 1px
+    height: 1px
+  
+  &__lable
+    position: relative
+    padding-left: 22px
+    cursor: pointer
+  
+  &__text
+    font-size: 12px
+    color: $color-lite-gray
+  
+    &::after
+      position: absolute
+      content: ""
+      display: block
+      top: 50%
+      left: 0%
+      transform: translate(0%, -50%)
+      width: 14px
+      height: 14px
+      border: 1px solid $color-gray-check
+  
+  &__checked:checked ~ &__lable &__text::after
+    background: url(../img/check.svg) center center / 14px 14px no-repeat
+  
+  &__checked:focus-visible ~ &__lable &__text::after
+    outline: 2px solid $color-lite-blue
+    outline-offset: 2px
+
+  &__checked:user-invalid + &__lable &__text::after
+    border-color: $color-red
+
+  

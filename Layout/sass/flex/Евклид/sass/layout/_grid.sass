@@ -1,0 +1,38 @@
+
+/* grid */ 
+
+.container
+  width: 100%
+  max-width: 1820px
+  margin: 0 auto
+  padding: 0 25px
+
+  @include respond(tablet_900)
+    padding: 0 15px
+
+.header
+  &__container
+    display: grid
+    grid-template-rows: min-content
+    grid-template-columns: minmax(110px, 225px) 1fr min-content
+    align-items: center
+    gap: 0 85px
+
+    @include respond(tablet_900)
+      grid-template-rows: repeat(3, min-content)
+      gap: 20px
+    
+.footer
+  &__container
+    display: grid
+    grid-template-rows: min-content
+    grid-template-columns: repeat(12, 1fr)
+    gap: 0 30px
+
+    @include respond(tablet_900)
+      grid-template-rows: repeat(3, min-content)
+      gap: 30px 0
+
+
+
+  

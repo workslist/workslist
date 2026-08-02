@@ -1,0 +1,50 @@
+/* footer */  
+
+.footer
+
+  background-color: $color-black
+  padding: 50px 0
+
+  @include respond(phone_600)
+    padding: 30px 0
+
+  &__box
+    grid-column: 1/4
+    display: flex
+    flex-direction: column
+    @include respond(tablet_900)
+      grid-column: 1 / -1
+      grid-row: 3 / -1
+
+  &__nav
+    @include respond(tablet_900)
+      display: none
+
+  &__soc
+    margin-top: auto
+  
+  &__form
+    grid-column: 4/9
+    width: 100%
+    max-width: 570px
+    justify-self: end
+    @include respond(tablet_900)
+      grid-column: 1 / -1
+      grid-row: 1 / 2
+      max-width: 100%
+      justify-self: start
+
+  &__descr
+    grid-column: 9/-1
+    max-width: 363px
+    justify-self: end
+    align-self: center
+    @include respond(tablet_900)
+      grid-column: 1 / --color1
+      max-width: 100%
+      justify-self: start
+      align-self: start
+
+  
+  &__item:not(:last-child)
+    margin-bottom: 13px

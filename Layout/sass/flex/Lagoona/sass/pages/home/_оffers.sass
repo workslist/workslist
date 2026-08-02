@@ -1,0 +1,98 @@
+/* оffers */  
+
+.offers
+  &__wrap
+    justify-content: center
+    gap: 26px
+    @include respond(phone_600)
+      gap: 18px
+  &__box
+    flex: 1 1 calc( 33% - 26px )
+    width: 100%
+    min-width: 230px
+    overflow: hidden
+    border-radius: 15px
+    background-color: $color-white
+    &_end
+      padding: 0 15px
+      min-height: 438px
+      background: url(../img/offers9.jpg) center / cover no-repeat
+
+  &__img
+    display: block
+    width: 100%
+
+  &__cart
+    width: 100%
+    max-width: 304px
+    padding: 32px 15px 45px
+    @include respond(phone_600)
+      max-width: 100%
+
+  &__btn
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    width: 100%
+    height: 100%
+    padding-bottom: 27px
+
+    .offers__link, .no-wrap 
+      font-size: 20px      
+      color: $color-white
+      vertical-align: middle 
+      transition: .3s all ease      
+
+    svg      
+      margin-left: 5px
+      vertical-align: middle
+      transition: .3s all ease
+      width: 10px
+      height: 17px
+      stroke: $color-white
+      fill: none
+
+    &:hover
+      .offers__link, .no-wrap
+        color: $color-yellow
+
+      svg
+        stroke: $color-yellow
+        margin-left: 8px
+  
+
+
+    &:active 
+      .offers__link, .no-wrap
+        color: $color-dark-yellow
+
+      svg
+        stroke: $color-dark-yellow
+        margin-left: 5px
+
+    
+  &__icon
+    svg
+      width: 94px
+      height: 14px
+
+  &__content
+    flex-wrap: wrap
+    margin-bottom: 16px
+    gap: 10px
+
+  &__price
+    white-space: nowrap
+
+  &__descr
+    &_gray
+      font-size: 16px    
+      color: $color-lite-gray
+      padding-right: 4px
+    &_price
+      font-size: 20px    
+      font-weight: 700
+      color: $color-black
+      padding-right: 4px
+
+  

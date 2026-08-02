@@ -1,0 +1,53 @@
+/* courses */  
+
+.courses
+  padding: 80px 0
+  @include respond(phone_600)
+    padding: 50px 0
+  
+  &__group
+    gap: 30px
+
+  &__cards
+    flex: 1
+    gap: 30px
+
+  &__card
+    flex: 1
+    border-radius: 20px
+    min-width: 280px
+    overflow: hidden
+    background-color: $color-bgc-gray
+
+  &__image
+    position: relative
+    
+    img
+      width: 100%
+
+  &__time
+    display: flex
+    align-items: center
+    gap: 7px
+    position: absolute
+    top: 10px
+    right: 4px
+
+    svg
+      display: inline
+      width: 20px
+      height: 20px
+      fill: $color-white
+
+    p
+      display: inline
+      color: $color-white
+    
+  &__content
+    width: 100%
+    max-width: 510px
+    height: 100%
+    margin: 0 auto
+    padding: 30px 15px
+    @include respond(phone_600)
+      max-width: 100%

@@ -1,0 +1,44 @@
+/* btn-link */ 
+
+.btn
+  font-weight: 700
+  color: $color-lite-gray
+  text-transform: uppercase
+  padding: 15px 30px
+  width: fit-content
+  background-color: $color-green
+
+  transition: .3s all ease  
+  &:hover
+    background-color: $color-lite-green
+  
+  &:active
+    background-color: $color-dark-green
+
+  &--banner
+    grid-column: 2 / -2
+    margin-bottom: 158px
+  
+  &--team
+    grid-column: 2 / -2
+  
+  &--catalog
+    grid-column: 1 / -1    
+    width: 100%
+    text-align: center
+    padding: 17px 30px
+
+.link
+  &--footer
+    color: $color-white
+    font-weight: 300
+    text-transform: uppercase
+    white-space: nowrap
+
+    transition: .3s all ease
+    
+    &:hover
+      color: $color-green
+    
+    &:active
+      color: $color-dark-green

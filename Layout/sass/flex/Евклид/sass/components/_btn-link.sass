@@ -1,0 +1,184 @@
+/* btn-link */ 
+
+.link-img
+  &:link, &:visited
+    display: inline-block
+    cursor: pointer
+
+  &_logo svg
+    width: 100%
+    height: auto
+    max-width: 225px
+
+  &_search svg
+    width: 24px
+    height: 24px
+    stroke: $color-black
+    fill: $color-black
+    transition: .2s all ease
+  
+  &_search
+    &:hover svg
+      stroke: $color-orange
+      fill: $color-orange
+
+  &_footer-logo
+    margin-bottom: 25px
+
+  &_footer-logo svg
+    width: 100%
+    height: auto
+    max-width: 224px
+
+  &_footer-soc:not(:last-child)
+    margin-right: 25px
+
+  &_footer-soc svg
+    width: 60px
+    height: height
+    fill: $color-gray
+    transition: .2s all ease  
+
+  &_footer-soc
+    &:hover svg
+      fill: $color-orange
+    &:active svg
+      fill: $color-dark-orange
+   
+.link-text
+  &_header
+    white-space: nowrap
+    &:link, &:visited
+      color: $color-black
+      @include font-18-600
+      cursor: pointer
+
+      @include respond(phone_600)
+        font-size: 16px
+
+    &:hover
+      border-bottom: 2px solid $color-orange
+    &:active
+      border-bottom: 2px solid $color-dark-orange
+      color: $color-dark-orange
+
+  &_footer
+    &:link, &:visited
+      color: $color-lite-gray
+      @include font-18-600
+      transition: .2s all ease
+      cursor: pointer
+
+      @include respond(phone_600)
+        font-size: 16px
+
+    &:hover
+      color: $color-orange
+    &:active      
+      color: $color-dark-orange
+
+.link-btn-orange
+  &:link, &:visited
+    display: inline-block
+    background-color: $color-orange
+    color: $color-white
+    border-radius: 16px
+    text-align: center
+    transition: .3s all ease
+    cursor: pointer
+
+    @include respond(phone_600)
+      border-radius: 8px
+
+  &:hover
+    background-color: $color-lite-orange
+  
+  &:active
+    background-color: $color-dark-orange  
+
+  &_banner
+    padding: 23px 39px
+    @include font-23-700
+
+    @include respond(phone_600)
+      padding: 13px 29px
+      @include font-16-700
+
+  &_stages
+    flex: 1 1 49%
+    padding: 20px 38px
+    @include font-16-700
+
+
+.link-border
+  &:link, &:visited
+    display: inline-block
+    background-color: transparent
+    border-radius: 16px
+    text-align: center
+
+    @include respond(phone_600)
+      border-radius: 8px
+
+  &_about
+    &:link, &:visited
+      border: 3px solid $color-orange
+      padding: 17px 35px
+      color: $color-white
+      @include font-16-700
+      transition: .3s all ease
+    &:hover
+      background-color: $color-orange
+    &:active
+      background-color: $color-dark-orange
+      border-color: $color-dark-orange
+
+  &_stages
+    &:link, &:visited
+      flex: 1 1 41%
+
+      display: flex
+      align-items: center
+      justify-content: center
+
+      border: 1px solid $color-black
+      padding: 19px 37px
+      color: $color-black      
+      transition: .3s all ease
+    &:hover
+      background-color: $color-gray
+      border-color: $color-gray
+      color: $color-white
+    &:active
+      background-color: $color-black
+      border-color: $color-black
+      color: $color-white
+  
+
+.btn-orange
+  display: inline-block    
+  background-color: $color-orange
+  color: $color-white
+  border-radius: 16px   
+  transition: .3s all ease
+  cursor: pointer
+  &_form     
+    @include font-16-700
+    padding: 19px 52px
+
+    @include respond(phone_600)
+      border-radius: 8px
+
+  &:hover
+    background-color: $color-lite-orange
+  
+  &:active
+    background-color: $color-dark-orange  
+
+  
+
+  
+
+
+
+

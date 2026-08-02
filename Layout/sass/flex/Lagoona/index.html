@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>title</title>
+
+ <link rel="stylesheet" href="css/main.css">
+
+ <!-- Календарь в форме -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+ <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+   flatpickr("#date", {
+    dateFormat: "d-m-Y",
+    disableMobile: true,
+    allowInput: true
+   });
+  });
+ </script>
+
+ <style>
+  .form__wrap-test {
+   position: relative;
+   overflow: visible;
+  }
+ </style>
+
+</head>
+
+<body>
+
+ <header class="header margin-section">
+
+  <div class="container">
+
+   <div class="header__top flex-space-center">
+
+    <a href="#" class="header__logo">
+     <img src="img/h_logo.svg" alt="Lagoona | Сеть отелей">
+    </a>
+
+    <div class="flex-space-center header__contact">
+
+     <a class="header__phone" href="tel:+74953225448" target="_blank">+7&nbsp;495&nbsp;322&#8209;54&#8209;48</a>
+
+     <a class="flex-left-center header__lk" href="#">
+      <svg>
+       <use xlink:href="img/sprite.svg#h_symbol"></use>
+      </svg>
+      Личный кабинет
+     </a>
+
+    </div>
+
+   </div>
+
+   <div class="header-bottom flex-center-center">
+
+    <div class="header-bottom__wrap flex-space-center">
+     <nav class="header-menu">
+      <ul class="header-menu__list flex-space-center">
+       <li class="header-menu__item">
+        <a href="#" class="header-menu__link">О нас</a>
+       </li>
+       <li class="header-menu__item">
+        <a href="#" class="header-menu__link">Услуги</a>
+       </li>
+       <li class="header-menu__item">
+        <a href="#" class="header-menu__link">Преимущества</a>
+       </li>
+       <li class="header-menu__item">
+        <a href="#" class="header-menu__link">Размещение</a>
+       </li>
+       <li class="header-menu__item">
+        <a href="#" class="header-menu__link">Блог</a>
+       </li>
+       <li class="header-menu__item">
+        <a href="#" class="header-menu__link">Контакты</a>
+       </li>
+      </ul>
+     </nav>
+
+     <div class="header-bottom__box flex-space-center">
+
+      <button class="button-border">
+       Хочу тур
+      </button>
+
+      <button class="button-border">
+       Обратный звонок
+      </button>
+
+     </div>
+    </div>
+
+   </div>
+
+  </div>
+
+
+
+ </header>
+
+ <main class="main">
+
+  <h1 class="title title_home">Сеть отелей Lagoona</h1>
+
+  <section class="special margin-section">
+   <div class="container">
+
+    <h2 class="caption">
+     Спецпредложения
+    </h2>
+
+    <div class="special__wrap flex-wrap">
+
+     <div class="special__banner flex-center-center ">
+
+      <div class="banner-box banner-box_one flex-center-bottom">
+       <a href="#" class="banner-box__content flex-center-bottom">
+        <div class="banner-box__wrap">
+         <h3 class="banner-box__subject">
+          Мальдивские <br> острова
+         </h3>
+
+         <p class="banner-box__descr">
+          от 55 000 ₽
+         </p>
+
+
+         <span class="banner-box__link flex-left-center">
+          Подробнее
+          <svg>
+           <use xlink:href="img/sprite.svg#arrow_right"></use>
+          </svg>
+         </span>
+        </div>
+       </a>
+      </div>
+
+      <div class="banner-box banner-box_two flex-center-bottom">
+       <a href="#" class="banner-box__content flex-center-bottom">
+        <div class="banner-box__wrap">
+         <h3 class="banner-box__subject">
+          Горящий <br> тур на&nbsp;остров Крит
+         </h3>
+
+         <p class="banner-box__descr">
+          от 55 000 ₽
+         </p>
+
+
+         <span class="banner-box__link flex-left-center">
+          Подробнее
+          <svg>
+           <use xlink:href="img/sprite.svg#arrow_right"></use>
+          </svg>
+         </span>
+        </div>
+       </a>
+      </div>
+
+     </div>
+
+     <div class="special__banner flex-center-center">
+
+      <div class="banner-box banner-box_three flex-center-bottom">
+       <a href="#" class="banner-box__content flex-center-bottom">
+        <div class="banner-box__wrap">
+         <h3 class="banner-box__subject">
+          Номера <br> категории <br> люкс
+         </h3>
+
+         <p class="banner-box__descr">
+          от 30 000 ₽
+         </p>
+
+
+         <span class="banner-box__link flex-left-center">
+          Подробнее
+          <svg>
+           <use xlink:href="img/sprite.svg#arrow_right"></use>
+          </svg>
+         </span>
+        </div>
+       </a>
+      </div>
+
+     </div>
+
+    </div>
+
+
+   </div>
+  </section>
+
+  <section class="about margin-section">
+   <div class="container">
+
+    <h2 class="caption">
+     О нас
+    </h2>
+    <p class="descr descr_about">
+     Идейные соображения высшего порядка, а&nbsp;также&nbsp;сложившаяся структура организации влечёт за&nbsp;собой процесс внедрения и&nbsp;модернизации системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а&nbsp;также дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям. Равным образом сложившаяся структура организации требуют определения и&nbsp;уточнения существенных финансовых
+     и&nbsp;административных условий.
+    </p>
+
+   </div>
+  </section>
+
+  <section class="services margin-section">
+   <div class="container">
+
+    <h2 class="caption">
+     Услуги
+    </h2>
+
+    <div class="services__wrap flex-wrap">
+
+     <a href="#" class="services__box flex-column-center">
+
+      <img class="services__img" src="img/img_services1.png" alt="">
+
+      <div class="services__content">
+       <span class="services__link">
+        Эксклюзивное обслуживание
+        <svg>
+         <use xlink:href="img/sprite.svg#arrow_right"></use>
+        </svg>
+       </span>
+
+       <p class="descr descr_services">
+        Равным образом постоянный количественный рост и&nbsp;сфера нашей&nbsp;активности
+       </p>
+      </div>
+
+     </a>
+
+     <a href="#" class="services__box flex-column-center">
+
+      <img class="services__img" src="img/img_services2.png" alt="">
+
+      <div class="services__content">
+       <span class="services__link">
+        Аренда банкетных залов
+        <svg>
+         <use xlink:href="img/sprite.svg#arrow_right"></use>
+        </svg>
+       </span>
+
+       <p class="descr descr_services">
+        Значимость этих&nbsp;проблем настолько очевидна, что&nbsp;дальнейшее развитие различных форм
+       </p>
+      </div>
+
+     </a>
+
+     <a href="#" class="services__box flex-column-center">
+
+      <img class="services__img" src="img/img_services3.png" alt="">
+
+      <div class="services__content">
+       <span class="services__link">
+        Сауны, бассейны, бани, <span class="no-wrap">фитнес&#8209;залы
+         <svg>
+          <use xlink:href="img/sprite.svg#arrow_right"></use>
+         </svg>
+        </span>
+       </span>
+
+       <p class="descr descr_services">
+        Равным образом постоянный количественный рост и&nbsp;сфера нашей&nbsp;активности
+       </p>
+      </div>
+
+     </a>
+
+     <a href="#" class="services__box flex-column-center">
+
+      <img class="services__img" src="img/img_services4.png" alt="">
+
+      <div class="services__content">
+       <span class="services__link">
+        Охраняемые автомобильные <span class="no-wrap">стоянки
+         <svg>
+          <use xlink:href="img/sprite.svg#arrow_right"></use>
+         </svg></span>
+       </span>
+
+       <p class="descr descr_services">
+        Значимость этих&nbsp;проблем настолько очевидна, что&nbsp;дальнейшее развитие различных форм
+       </p>
+      </div>
+
+     </a>
+
+
+    </div>
+
+   </div>
+
+
+  </section>
+
+  <section class="advant margin-section">
+   <div class="container">
+
+    <h2 class="caption">
+     Преимущества
+    </h2>
+
+    <div class="advant__wrap flex-wrap">
+
+     <div class="advant__box flex-center-top">
+      <div class="advant__content">
+
+       <div class="advant__icon">
+        <svg>
+         <use xlink:href="img/sprite.svg#advant_icon_1"></use>
+        </svg>
+       </div>
+       <p class="descr descr_advant">
+        Идейные соображения высшего порядка,
+        а&nbsp;также&nbsp;постоянный количественный рост
+       </p>
+
+      </div>
+     </div>
+
+     <div class="advant__box flex-center-top">
+      <div class="advant__content">
+
+       <div class="advant__icon">
+        <svg>
+         <use xlink:href="img/sprite.svg#advant_icon_2"></use>
+        </svg>
+       </div>
+       <p class="descr descr_advant">
+        Значимость этих&nbsp;проблем настолько очевидна, что&nbsp;вопрос остаётся открытым
+       </p>
+
+      </div>
+     </div>
+
+     <div class="advant__box flex-center-top">
+      <div class="advant__content">
+
+       <div class="advant__icon">
+        <svg>
+         <use xlink:href="img/sprite.svg#advant_icon_3"></use>
+        </svg>
+       </div>
+       <p class="descr descr_advant">
+        Таким образом реализация плановых заданий играет важную роль для&nbsp;понимания
+       </p>
+
+      </div>
+     </div>
+
+     <div class="advant__box flex-center-top">
+      <div class="advant__content">
+
+       <div class="advant__icon">
+        <svg>
+         <use xlink:href="img/sprite.svg#advant_icon_4"></use>
+        </svg>
+       </div>
+       <p class="descr descr_advant">
+        Повседневная практика показывает, что&nbsp;сложившаяся структура организации
+       </p>
+
+      </div>
+     </div>
+
+     <div class="advant__box flex-center-top">
+      <div class="advant__content">
+
+       <div class="advant__icon">
+        <svg>
+         <use xlink:href="img/sprite.svg#advant_icon_5"></use>
+        </svg>
+       </div>
+       <p class="descr descr_advant">
+        Равным образом рамки и&nbsp;место обучения кадров способствует подготовки сотрудника
+       </p>
+
+      </div>
+     </div>
+
+     <div class="advant__box flex-center-top">
+      <div class="advant__content">
+
+       <div class="advant__icon">
+        <svg>
+         <use xlink:href="img/sprite.svg#advant_icon_6"></use>
+        </svg>
+       </div>
+       <p class="descr descr_advant">
+        Консультация с&nbsp;активом влечёт за&nbsp;собой процесс внедрения услуг нашего&nbsp;сервиса
+       </p>
+
+      </div>
+     </div>
+
+     <div class="advant__box flex-center-top">
+      <div class="advant__content">
+
+       <div class="advant__icon">
+        <svg>
+         <use xlink:href="img/sprite.svg#advant_icon_7"></use>
+        </svg>
+       </div>
+       <p class="descr descr_advant">
+        Повседневная практика показывает, что&nbsp;дальнейшее развитие различных
+       </p>
+
+      </div>
+     </div>
+
+     <div class="advant__box flex-center-top">
+      <div class="advant__content">
+
+       <div class="advant__icon">
+        <svg>
+         <use xlink:href="img/sprite.svg#advant_icon_8"></use>
+        </svg>
+       </div>
+       <p class="descr descr_advant">
+        Значимость настолько очевидна, что&nbsp;консультация экспертов помогает
+       </p>
+
+      </div>
+     </div>
+
+    </div>
+
+
+
+   </div>
+  </section>
+
+  <section class="offers margin-section">
+   <div class="container">
+
+    <h2 class="caption">
+     Размещение
+    </h2>
+    <div class="offers__wrap flex-wrap">
+
+     <div class="offers__box flex-column-center">
+      <a href="#" class="offers__link-img">
+       <img class="offers__img" src="img/offers1.jpg" alt="">
+      </a>
+
+      <div class="offers__cart">
+
+       <div class="offers__content flex-space-center">
+        <div class="offers__price">
+         <span class="offers__descr offers__descr_gray">от</span>
+         <span class="offers__descr offers__descr_price">4 698 ₽</span>
+         <span class="descr">/&nbsp;ночь</span>
+        </div>
+
+        <div class="offers__icon">
+         <svg>
+          <use xlink:href="img/sprite.svg#star4"></use>
+         </svg>
+        </div>
+       </div>
+
+       <p class="descr descr_offers">
+        Lagoona espa&ntilde;ola
+       </p>
+
+       <p class="descr descr_offers-country">
+        Барселона, Испания
+       </p>
+
+       <a href="#" class="button-border" href="#">
+        Номера
+       </a>
+
+      </div>
+
+     </div>
+
+     <div class="offers__box flex-column-center">
+      <a href="#" class="offers__link-img">
+       <img class="offers__img" src="img/offers2.jpg" alt="">
+      </a>
+
+      <div class="offers__cart">
+
+       <div class="offers__content flex-space-center">
+        <div class="offers__price">
+         <span class="offers__descr offers__descr_gray">от</span>
+         <span class="offers__descr offers__descr_price">5 148 ₽</span>
+         <span class="descr">/&nbsp;ночь</span>
+        </div>
+
+        <div class="offers__icon">
+         <svg>
+          <use xlink:href="img/sprite.svg#star4"></use>
+         </svg>
+        </div>
+       </div>
+
+       <p class="descr descr_offers">
+        Lagoona son t&iacute;picas
+       </p>
+
+       <p class="descr descr_offers-country">
+        Барселона, Испания
+       </p>
+
+       <a href="#" class="button-border" href="#">
+        Номера
+       </a>
+
+      </div>
+
+     </div>
+
+
+     <div class="offers__box flex-column-center">
+      <a href="#" class="offers__link-img">
+       <img class="offers__img" src="img/offers3.jpg" alt="">
+      </a>
+
+      <div class="offers__cart">
+
+       <div class="offers__content flex-space-center">
+        <div class="offers__price">
+         <span class="offers__descr offers__descr_gray">от</span>
+         <span class="offers__descr offers__descr_price">6 254 ₽</span>
+         <span class="descr">/&nbsp;ночь</span>
+        </div>
+
+        <div class="offers__icon">
+         <svg>
+          <use xlink:href="img/sprite.svg#star5"></use>
+         </svg>
+        </div>
+       </div>
+
+       <p class="descr descr_offers">
+        Lagoona de&nbsp;la&nbsp;guerra
+       </p>
+
+       <p class="descr descr_offers-country">
+        Барселона, Испания
+       </p>
+
+       <a href="#" class="button-border" href="#">
+        Номера
+       </a>
+
+      </div>
+
+     </div>
+
+
+     <div class="offers__box flex-column-center">
+      <a href="#" class="offers__link-img">
+       <img class="offers__img" src="img/offers4.jpg" alt="">
+      </a>
+
+      <div class="offers__cart">
+
+       <div class="offers__content flex-space-center">
+        <div class="offers__price">
+         <span class="offers__descr offers__descr_gray">от</span>
+         <span class="offers__descr offers__descr_price">6 320 ₽</span>
+         <span class="descr">/&nbsp;ночь</span>
+        </div>
+
+        <div class="offers__icon">
+         <svg>
+          <use xlink:href="img/sprite.svg#star5"></use>
+         </svg>
+        </div>
+       </div>
+
+       <p class="descr descr_offers">
+        Lagoona mentira piadosa
+       </p>
+
+       <p class="descr descr_offers-country">
+        Барселона, Испания
+       </p>
+
+       <a href="#" class="button-border" href="#">
+        Номера
+       </a>
+
+      </div>
+
+     </div>
+
+
+     <div class="offers__box flex-column-center">
+      <a href="#" class="offers__link-img">
+       <img class="offers__img" src="img/offers5.jpg" alt="">
+      </a>
+
+      <div class="offers__cart">
+
+       <div class="offers__content flex-space-center">
+        <div class="offers__price">
+         <span class="offers__descr offers__descr_gray">от</span>
+         <span class="offers__descr offers__descr_price">6 457 ₽</span>
+         <span class="descr">/&nbsp;ночь</span>
+        </div>
+
+        <div class="offers__icon">
+         <svg>
+          <use xlink:href="img/sprite.svg#star4"></use>
+         </svg>
+        </div>
+       </div>
+
+       <p class="descr descr_offers">
+        Lagoona empujar la&nbsp;creatividad
+       </p>
+
+       <p class="descr descr_offers-country">
+        Барселона, Испания
+       </p>
+
+       <a href="#" class="button-border" href="#">
+        Номера
+       </a>
+
+      </div>
+
+     </div>
+
+
+     <div class="offers__box flex-column-center">
+      <a href="#" class="offers__link-img">
+       <img class="offers__img" src="img/offers6.jpg" alt="">
+      </a>
+
+      <div class="offers__cart">
+
+       <div class="offers__content flex-space-center">
+        <div class="offers__price">
+         <span class="offers__descr offers__descr_gray">от</span>
+         <span class="offers__descr offers__descr_price">6 320 ₽</span>
+         <span class="descr">/&nbsp;ночь</span>
+        </div>
+
+        <div class="offers__icon">
+         <svg>
+          <use xlink:href="img/sprite.svg#star4"></use>
+         </svg>
+        </div>
+       </div>
+
+       <p class="descr descr_offers">
+        Lagoona el&nbsp;retorno
+       </p>
+
+       <p class="descr descr_offers-country">
+        Барселона, Испания
+       </p>
+
+       <a class="button-border" href="#">
+        Номера
+       </a>
+
+      </div>
+
+     </div>
+
+
+     <div class="offers__box flex-column-center">
+      <a href="#" class="offers__link-img">
+       <img class="offers__img" src="img/offers7.jpg" alt="">
+      </a>
+
+      <div class="offers__cart">
+
+       <div class="offers__content flex-space-center">
+        <div class="offers__price">
+         <span class="offers__descr offers__descr_gray">от</span>
+         <span class="offers__descr offers__descr_price">6 505 ₽</span>
+         <span class="descr">/&nbsp;ночь</span>
+        </div>
+
+        <div class="offers__icon">
+         <svg>
+          <use xlink:href="img/sprite.svg#star5"></use>
+         </svg>
+        </div>
+       </div>
+
+       <p class="descr descr_offers">
+        Lagoona mentira piadosa
+       </p>
+
+       <p class="descr descr_offers-country">
+        Барселона, Испания
+       </p>
+
+       <a class="button-border" href="#">
+        Номера
+       </a>
+
+      </div>
+
+     </div>
+
+
+     <div class="offers__box flex-column-center">
+      <a href="#" class="offers__link-img">
+       <img class="offers__img" src="img/offers8.jpg" alt="">
+      </a>
+
+      <div class="offers__cart">
+
+       <div class="offers__content flex-space-center">
+        <div class="offers__price">
+         <span class="offers__descr offers__descr_gray">от</span>
+         <span class="offers__descr offers__descr_price">6 824 ₽</span>
+         <span class="descr">/&nbsp;ночь</span>
+        </div>
+
+        <div class="offers__icon">
+         <svg>
+          <use xlink:href="img/sprite.svg#star4"></use>
+         </svg>
+        </div>
+       </div>
+
+       <p class="descr descr_offers">
+        Lagoona suerte sigui&oacute; siempre
+       </p>
+
+       <p class="descr descr_offers-country">
+        Барселона, Испания
+       </p>
+
+       <a class="button-border" href="#">
+        Номера
+       </a>
+
+      </div>
+
+     </div>
+
+
+     <div class="offers__box flex-column-center offers__box_end">
+
+      <a href="#" class="offers__btn">
+
+       <div class="offers__link">
+        Посмотреть <span class="no-wrap">все варианты
+         <svg>
+          <use xlink:href="img/sprite.svg#arrow_right"></use>
+         </svg> </span>
+       </div>
+
+      </a>
+
+     </div>
+
+    </div>
+
+
+
+
+
+   </div>
+  </section>
+
+  <section class="tour margin-section">
+   <div class="container">
+    <div class="tour__container">
+     <h2 class="caption caption_tour">
+      Хочу тур
+     </h2>
+     <div class="tour__wrap">
+
+      <div class="tour__box">
+       <form action="https://postman-echo.com/post" method="post" class="form flex-left-center">
+
+        <div class="form__box">
+
+         <div class="form__group">
+          <label for="city" class="form__label">Город вылета</label>
+          <div class="form__wrap form__wrap-select">
+           <select id="city" name="city" class="form__select" required>
+            <option class="form__option" value="" selected disabled>Выберите город</option>
+            <option class="form__option" value="Санкт-Петербург">Санкт&#8209;Петербург</option>
+            <option class="form__option" value="Москва">Москва</option>
+            <option class="form__option" value="Нижний Новгород">Нижний Новгород</option>
+            <option class="form__option" value="Ярославль">Ярославль</option>
+            <option class="form__option" value="Владимир">Владимир</option>
+            <option class="form__option" value="Казань">Казань</option>
+           </select>
+          </div>
+         </div>
+
+         <div class="form__group">
+          <label for="country" class="form__label">Страна</label>
+          <div class="form__wrap form__wrap-select">
+           <select class="form__select" name="country" id="country">
+            <option class="form__option" value="Австралия" selected>Австралия</option>
+            <option class="form__option" value="Австрия">Австрия</option>
+            <option class="form__option" value="Азербайджан">Азербайджан</option>
+            <option class="form__option" value="Албания">Албания</option>
+            <option class="form__option" value="Англия">Англия</option>
+            <option class="form__option" value="Аргентина">Аргентина</option>
+            <option class="form__option" value="Армения">Армения</option>
+            <option class="form__option" value="Белоруссия">Белоруссия</option>
+            <option class="form__option" value="Бельгия">Бельгия</option>
+           </select>
+          </div>
+         </div>
+
+         <div class="form__group form__group-date">
+          <label for="date" class="form__label form__label-date">Дата прибытия</label>
+          <div class="form__wrap form__wrap-date">
+           <input type="text" id="date" class="form__input form__input-date" name="date" placeholder="дд-мм-гггг">
+          </div>
+         </div>
+
+         <div class="form__group form__group-number">
+          <label for="nights" class="form__label">Ночей</label>
+          <input class="form__input form__input-number" type="number" step="1" min="1" max="30" value="6" name="nights" id="nights" required>
+         </div>
+
+         <div class="form__group form__group-number content-tourists">
+          <label for="tourists" class="form__label">Туристы</label>
+          <input class="form__input form__input-number" type="number" step="1" min="1" max="30" value="2" name="tourists" id="tourists" required>
+         </div>
+
+        </div>
+
+        <div class="form__button">
+         <button type="submit" class="button-border">
+          Найти
+         </button>
+        </div>
+
+       </form>
+
+      </div>
+
+
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <section class="contacts margin-section">
+   <div class="container">
+
+    <h2 class="caption">
+     Контакты
+    </h2>
+
+    <div class="contacts__block">
+
+     <div class="contacts__wrap flex-wrap-space">
+
+      <div class="contacts__content flex-column">
+
+       <div class="contacts__content-wrap flex-column">
+
+        <div class="contacts__content-box flex-space">
+
+         <div class="contacts__content-cell-one">
+          <p class="descr descr_contacts-one">
+           Адрес
+          </p>
+         </div>
+
+         <div class="contacts__content-cell-two">
+          <p class="descr descr_contacts-two">
+           Москва, улица Юности, дом&nbsp;5 строение&nbsp;4, офис&nbsp;2
+          </p>
+         </div>
+
+        </div>
+
+        <div class="contacts__content-box flex-space">
+
+         <div class="contacts__content-cell-one">
+          <p class="descr descr_contacts-one">
+           Телефоны
+          </p>
+         </div>
+
+         <div class="contacts__content-cell-two">
+          <p class="descr descr_contacts-phone">
+           <a class="link link_contacts" href="tel:+74995356434">
+            +7&nbsp;499&nbsp;535&#8209;64&#8209;34
+           </a>
+           <a class="link link_contacts" href="tel:+74950050544">
+            +7&nbsp;495&nbsp;005&#8209;05&#8209;44
+           </a>
+          </p>
+         </div>
+
+        </div>
+
+        <div class="contacts__content-box flex-space">
+
+         <div class="contacts__content-cell-one">
+          <p class="descr descr_contacts-one">
+           Email
+          </p>
+         </div>
+
+         <div class="contacts__content-cell-two">
+          <div class="contacts__email">
+
+           <p class="descr descr_contacts-email">
+            <a class="link link_contacts" href="mailto::lg.oona@mail.ru">
+             lg.oona@mail.ru
+            </a>
+            <span class="text text_contacts-email">
+             по&nbsp;вопросам бронирования
+            </span>
+           </p>
+
+           <p class="descr descr_contacts-email">
+            <a class="link link_contacts" href="mailto:hotels.ln@mail.ru">
+             hotels.ln@mail.ru
+            </a>
+            <span class="text text_contacts-email">
+             по&nbsp;вопросам сотрудничества
+            </span>
+           </p>
+
+          </div>
+         </div>
+
+        </div>
+
+        <div class="contacts__content-box flex-space">
+
+         <div class="contacts__content-cell-one">
+          <p class="descr descr_contacts-one">
+           График
+          </p>
+         </div>
+
+         <div class="contacts__content-cell-two">
+          <p class="descr descr_contacts-two">
+           Понедельник&#8209;пятница, с&nbsp;10:00 до&nbsp;19:00
+          </p>
+         </div>
+
+        </div>
+
+       </div>
+
+       <button class="button-border button-border_contacts">
+        Построить маршрут
+       </button>
+
+      </div>
+
+      <div class="contacts__banner">
+       <div class="contacts__banner-img"></div>
+      </div>
+
+     </div>
+
+
+
+    </div>
+
+
+   </div>
+  </section>
+
+ </main>
+
+ <footer class="footer">
+
+  <div class="container footer__container">
+
+   <div class="footer__wrap">
+
+    <div class="footer__size flex-space">
+
+     <div class="footer__box flex-wrap-space">
+
+      <div class="footer__text flex-column">
+
+       <p class="descr descr_footer">
+        &copy;&nbsp;2012&ndash;2026 Управляющая компания Объединённой сети &laquo;Лагуна&nbsp;Хотелс&raquo;
+       </p>
+
+       <p class="descr descr_footer">
+        Представленная на&nbsp;сайте информация носит справочный характер и&nbsp;не&nbsp;является публичной офертой
+       </p>
+
+       <a class="link link_footer" href="#">
+        Пользовательское соглашение
+       </a>
+
+      </div>
+
+      <div class="footer__contacts flex-column">
+
+       <p class="descr descr_footer">
+        11710, улица Юности, дом 5&nbsp;строение&nbsp;4, офис&nbsp;2
+       </p>
+
+       <div class="footer__contacts-box flex-space">
+
+        <div class="footer__link flex-column">
+
+         <div class="footer__link-box flex-column">
+
+          <a class="link link_footer" href="tel:+74995356434">
+           +7&nbsp;499&nbsp;535&#8209;64&#8209;34
+          </a>
+
+          <a class="link link_footer" href="tel:+74950050544">
+           +7&nbsp;495&nbsp;005&#8209;05&#8209;44
+          </a>
+
+         </div>
+
+         <div class="footer__link-box flex-column">
+
+          <a class="link link_footer" href="mailto:lg.oona@mail.ru">
+           lg.oona@mail.ru
+          </a>
+
+          <a class="link link_footer" href="mailto:hotels.ln@mail.ru">
+           hotels.ln@mail.ru
+          </a>
+
+         </div>
+
+        </div>
+
+        <div class="footer__img">
+         <img src="img/footer_contacts.svg" alt="">
+        </div>
+
+       </div>
+
+      </div>
+
+     </div>
+
+     <div class="footer__soc flex-column">
+      <a class="footer__soc-icon" href="#" target="_blank">
+       <svg>
+        <use xlink:href="img/sprite.svg#soc1"></use>
+       </svg>
+      </a>
+      <a class="footer__soc-icon" href="#" target="_blank">
+       <svg>
+        <use xlink:href="img/sprite.svg#soc2"></use>
+       </svg>
+      </a>
+      <a class="footer__soc-icon" href="#" target="_blank">
+       <svg>
+        <use xlink:href="img/sprite.svg#soc3"></use>
+       </svg>
+      </a>
+     </div>
+
+    </div>
+
+   </div>
+
+  </div>
+
+ </footer>
+
+ <!-- <script src="js/main.js"></script> -->
+
+</body>
+
+</html>

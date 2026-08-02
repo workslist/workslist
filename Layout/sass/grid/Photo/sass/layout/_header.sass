@@ -1,0 +1,63 @@
+/* header */  
+
+.header
+  background-color: $color-black 
+
+  &__container
+    display: grid
+    grid-template-columns: 191px 1fr minmax(25px, 78px)
+    grid-template-areas: "logo menu search"
+    align-items: center
+    @include respond(tablet_900)
+      padding: 0
+      grid-template-columns: 191px auto
+      grid-template-areas: "logo search" "menu menu"
+
+  &__logo
+    grid-area: logo
+    padding: 25px 0
+    svg
+      width: 191px
+      height: 31px
+    
+    @include respond(tablet_900)
+      padding-left: 15px
+
+  &__search
+    grid-area: search    
+    padding: 25px 0
+    justify-self: end
+    svg
+      transition: .3s all ease
+      width: 25px
+      height: 25px
+      fill: $color-white
+        
+    &:hover 
+      svg
+        fill: $color-orange
+      
+    &:active 
+      svg
+        fill: $color-dark-orange
+    
+    @include respond(tablet_900)
+      padding-right: 15px
+
+  &__nav
+    grid-area: menu
+    display: grid
+    justify-items: center
+    padding: 12px 30px
+    @include respond(tablet_900)
+      justify-items: start
+      padding: 12px 15px
+      background-color: $color-dark-gray
+
+  &__items
+    width: 100%
+    max-width: 742px
+    gap: 6px 15px
+    @include respond(tablet_900)
+      justify-content: start
+      gap: 6px 30px

@@ -1,0 +1,84 @@
+/* btn-link */ 
+
+.button-border
+  width: fit-content
+  padding: 14px 19px
+  border: 3px solid $color-orange
+  background-color: transparent
+  white-space: nowrap
+  font-size: 16px
+  font-weight: 700
+  color: $color-white
+
+  transition: .3s all ease  
+  &:hover    
+    background-color: $color-orange    
+  
+  &:active
+    border-color: $color-dark-orange
+    background-color: $color-dark-orange    
+
+  &_contacts
+    padding: 26px 29.5px
+
+.link
+  color: $color-orange
+  transition: .3s all ease
+
+  &:hover
+    color: $color-black-orange
+  
+  &:active
+    color: $color-dark-orange
+  
+  &--header
+    font-family: TTFirsNeue
+    color: $color-white
+    white-space: nowrap
+
+    &:hover
+      color: $color-orange
+    
+    &:active
+      color: $color-dark-orange
+
+.btn
+  width: fit-content
+  font-size: 14px
+  font-weight: 700 
+  line-height: 14px
+  color: $color-white
+  padding: 18px 22px
+  height: 50px
+  background-color: $color-orange
+  transition: .3s all ease
+  
+  &:hover
+    background-color: $color-black-orange
+    
+  &:active
+    background-color: $color-dark-orange
+  
+  @include respond(phone_600)
+    height: 40px
+    padding: 13px 22px
+
+.close
+  position: absolute
+  top: 20px
+  right: 20px
+  font-size: 0
+  background-color: transparent
+  svg
+    fill: $color-lite-gray
+    width: 20px
+    height: 20px
+    cursor: pointer
+    transition: .3s all ease
+  &:hover 
+    svg
+      fill: $color-black-orange
+    
+  &:active 
+    svg
+      fill: $color-dark-orange

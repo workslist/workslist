@@ -1,0 +1,44 @@
+/* card-border */
+
+.card-border
+  flex: 1
+  display: flex
+  justify-content: center
+  align-items: center
+  border: 1px solid $color-lite-gray
+  border-radius: 32px    
+
+  &__wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    max-width: 800px
+    padding: 20px
+    gap: 20px
+
+    @include respond(phone_600)
+      flex-direction: column
+    
+    &_questions
+      padding: 35px 20px
+      max-width: 490px
+
+      @include respond(tablet_900)
+        max-width: 100%
+        padding: 30px 20px
+
+  &__img svg
+    width: 100%
+    height: auto
+    max-width: 191px
+    min-width: 90px
+
+  &__box
+    width: 100%
+    max-width: 515px
+
+    &_questions
+      max-width: 100%
+
+

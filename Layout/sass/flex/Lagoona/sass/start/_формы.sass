@@ -1,0 +1,85 @@
+/* forms */ 
+
+// Имя-Почта-Текст-Кнопка-Чекбокс_Галочка_Текст
+.form1
+
+  &__input
+    width: 100%
+    height: 60px
+    border-radius: 16px
+    background-color: $color-dark-gray
+    color: $color-white
+    padding: 14px 24px
+    border: none
+    transition: .3s all ease
+
+    &::placeholder
+      color: $color-lite-gray
+
+    &:hover
+      background-color: $color-gray
+
+    &:focus
+      outline: none
+      background-color: $color-gray
+
+    &:focus:invalid      
+      border: 2px solid $color-red
+
+    &_name
+      margin-bottom: 25px
+
+    &_email
+      margin-bottom: 25px
+
+    &_message
+      display: flex
+      justify-content: flex-start
+      margin-bottom: 32px    
+      min-height: 150px
+      resize: none
+      
+
+  &__wrap
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    gap: 22px
+
+  &__box
+    // display: inline-block
+
+  &__checked
+    display: none
+
+  &__lable
+    position: relative
+    padding-left: 18px
+    cursor: pointer
+
+  &__text
+    color: $color-lite-gray
+
+    &::after
+      position: absolute
+      content: ""
+      display: block
+      top: 50%
+      left: 0%
+      transform: translate(0%, -50%)
+      width: 14px
+      height: 14px
+      border: 1px solid $color-lite-gray
+      // background: url(../img/check.svg) center center / 10px 10px no-repeat
+  
+  &__checked:checked ~ &__lable &__text::after
+    background: url(../img/check.svg) center center / 10px 10px no-repeat
+
+  // &__checked:invalid ~ &__lable &__text::after
+  //   border: 1px solid $color-red
+  
+  // &__checked:valid ~ &__lable &__text::after
+  //   border: 1px solid $color-red
+    
+
+

@@ -1,0 +1,100 @@
+/* header */  
+
+.header
+
+  &__top
+    padding: 30px 0
+    gap: 15px
+    @include respond(phone_600)
+      flex-wrap: wrap
+      padding: 20px 0
+
+  &__logo
+    width: 100%
+    max-width: 261px
+    @include respond(phone_600)
+      max-width: 100%
+
+  &__contact
+    flex: 1
+    max-width: 869px
+    gap: 10px
+
+  &__phone
+    white-space: nowrap
+    font-size: 20px
+    font-weight: 500
+    color: $color-gray
+
+    transition: .3s all ease
+    
+    &:hover
+      color: $color-yellow
+    
+    &:active
+      color: $color-dark-yellow
+
+  &__lk
+    flex-wrap: nowrap
+    white-space: nowrap
+    gap: 5px    
+    font-size: 16px
+    font-weight: 400
+    color: $color-yellow
+    transition: .3s all ease
+
+    svg
+      width: 24px
+      height: 24px
+      fill: $color-yellow
+      transition: .3s all ease
+
+    &:hover
+      color: $color-lite-yellow
+
+      svg
+        fill: $color-lite-yellow      
+   
+    &:active
+      color: $color-dark-yellow
+
+      svg
+        fill: $color-dark-yellow      
+
+
+.header-bottom 
+  padding: 14px 15px
+  background-color: $color-white
+  border-radius: 15px
+
+  &__wrap
+    width: 100%
+    flex-wrap: wrap
+    max-width: 1080px
+    gap: 15px
+
+  &__box
+    gap: 15px
+    @include respond(phone_600)
+      width: 100%
+
+.header-menu
+  flex: 1  
+  max-width: 642px
+  min-width: 300px
+
+  &__list
+    flex-wrap: wrap
+    gap: 15px
+
+  &__link
+    font-size: 16px
+    font-weight: 400
+    color: $color-gray
+    transition: .3s all ease
+    
+    &:hover
+      color: $color-yellow
+    
+    &:active
+      color: $color-dark-yellow
