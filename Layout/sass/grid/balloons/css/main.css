@@ -1,0 +1,120 @@
+/* base */
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  list-style: none;
+  font-size: 16px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 100%;
+  color: #000000;
+  border: none;
+}
+
+picture {
+  display: block;
+  font-size: 0;
+}
+
+img {
+  font-size: 0;
+}
+
+html {
+  font-size: 62.5%;
+  min-width: 375px;
+}
+
+a {
+  display: inline-block;
+  cursor: pointer;
+}
+
+button {
+  display: inline-block;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+body {
+  display: grid;
+  grid-template-columns: minmax(25px, 1fr) minmax(-webkit-min-content, 1340px) minmax(25px, 1fr);
+  grid-template-columns: minmax(25px, 1fr) minmax(min-content, 1340px) minmax(25px, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header {
+  grid-column: 2/3;
+}
+
+.main {
+  grid-column: 2/3;
+}
+
+.footer {
+  grid-column: 2/3;
+}
+
+/* header */
+.header {
+  background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/h_bg.png) top center/cover no-repeat;
+}
+.header__icon svg {
+  width: 56px;
+  height: 70px;
+}
+.header__nav {
+  background-color: #ffffff;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+}
+
+/* footer */
+/* btn-link */
+.btn {
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: #777777;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+/* typography */
+.title {
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 25px;
+    letter-spacing: 0.1em;
+  }
+}
+
+.descr--header {
+  font-size: 40px;
+  letter-spacing: 0.13em;
+  color: #ffffff;
+  padding-bottom: 50px;
+}
+@media only screen and (max-width: 600px) {
+  .descr--header {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=main.css.map */
