@@ -2,11 +2,14 @@
 
 // title
 .title
+  grid-column: 2 / -2
   font-size: 50px
   font-weight: 800  
   letter-spacing: 0.2em
+  line-height: 120%
   color: $color-white
-  padding-bottom: 10px
+  text-align: center
+  padding: 119px 0 10px
   @include respond(phone_600)
     font-size: 25px
     letter-spacing: 0.1em
@@ -24,9 +27,12 @@
 .descr
 
   &--header
+    grid-column: 2 / -2
     font-size: 40px    
     letter-spacing: 0.13em
+    line-height: 110%
     color: $color-white
+    text-align: center
     padding-bottom: 50px
     @include respond(phone_600)
       font-size: 18px

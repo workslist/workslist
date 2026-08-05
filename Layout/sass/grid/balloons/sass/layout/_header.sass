@@ -1,14 +1,23 @@
 /* header */  
 
 .header
+  display: grid
+  justify-items: center
+  grid-template-columns: minmax(25px, 1fr) 56px minmax(min-content, 1112px) 72px minmax(25px, 1fr)
+  padding: 50px 0 284px
   background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/h_bg.png) top center / cover no-repeat
+  @include respond(phone_600)
+    padding: 30px 0 142px
+  
 
   &__icon
+    grid-column: 2 / 3
     svg
       width: 56px
       height: 70px
     
   &__nav
+    grid-column: 4 / 5
     background-color: $color-white
     width: 70px
     height: 70px
