@@ -10,6 +10,12 @@
   color: $color-white
   text-align: center
   padding: 119px 0 10px
+
+  animation-name: header_title
+  animation-duration: 4s
+  animation-timing-function: ease-in-out
+  backface-visibility: hidden
+
   @include respond(phone_600)
     font-size: 25px
     letter-spacing: 0.1em
@@ -18,9 +24,25 @@
 // caption
 .caption
 
+  font-size: 36px
+  font-weight: 800
+  color: $color-gold
+  text-align: center
+
+  &--description
+    grid-column: 2 / -2
+    padding-bottom: 80px
+
 
 // subject
 .subject
+
+  &--description
+    font-size: 20px
+    font-weight: 700
+    letter-spacing: 0.1em
+    color: $color-gray
+    padding-bottom: 10px
   
   
 // descr
@@ -36,6 +58,11 @@
     padding-bottom: 50px
     @include respond(phone_600)
       font-size: 18px
+  
+  &--description
+    line-height: 140%
+    letter-spacing: 0.13em
+    color: $color-gray
     
   
 // text

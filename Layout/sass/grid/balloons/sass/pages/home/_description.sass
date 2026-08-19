@@ -1,0 +1,22 @@
+/* description */  
+
+.description
+  display: grid
+  justify-content: center
+  grid-template-columns: minmax(25px, 1fr) minmax(min-content, 532px) minmax(min-content, 577px) minmax(25px, 1fr)
+  padding: 80px 0 54px
+  gap: 30px
+
+  &__group
+    grid-column: 2 / 3
+    grid-row: span 1
+
+  &__images
+    grid-column: 3 / 4
+    grid-row: span 2
+
+    img
+      width: 100%
+      max-width: 318px
+
+  
