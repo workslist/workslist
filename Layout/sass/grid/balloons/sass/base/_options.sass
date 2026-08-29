@@ -3,16 +3,24 @@
 $color-white: #ffffff
 $color-black: #000000
 
+$color-brown-light: #BA8554
+$color-brown-dark: #A14F03
+
 $color-gold: #B4753B
 // $color-lite-yellow: #F0BF5F
 // $color-dark-yellow: #A47312
 $color-gray: #777777
 // $color-dark-gray: #333333
 $color-lite-gray: #F7F7F7
-// $color-gray-bg: #E9E9E9
-  
+// $color-gray-bg: #E9E9E9  
 
-
+@mixin menu_icon
+  display: inline-block
+  width: 38px
+  height: 2px
+  background-color: $color-black
+  @include respond(phone_600)
+    width: 28px
   
 
 

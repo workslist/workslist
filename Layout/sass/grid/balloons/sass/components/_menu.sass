@@ -1,3 +1,138 @@
 /* menu */  
 
 .menu
+  grid-column: 4 / 5
+  justify-items: start
+  position: relative
+  width: 100%
+
+  &__label
+    position: absolute
+    top: 0
+    right: 0
+    background-color: $color-white
+    width: 72px
+    height: 72px
+    border-radius: 50%
+    z-index: 200
+    cursor: pointer
+    text-align: center
+    transition: 1s all ease
+    &:hover .menu__icon::before
+      top: -12px
+      @include respond(phone_600)
+        top: -10px
+    &:hover .menu__icon::after
+      top: 12px
+      @include respond(phone_600)
+        top: 10px
+    @include respond(phone_600)
+      width: 52px
+      height: 52px
+      
+  &__icon
+    @include menu_icon
+    position: relative
+    margin-top: 35px
+    @include respond(phone_600)
+      margin-top: 25px
+
+    &::before
+      @include menu_icon
+      position: absolute
+      content: ""
+      top: -10px
+      left: 0
+      transition: .3s all ease
+      @include respond(phone_600)
+        top: -8px
+    &::after
+      @include menu_icon
+      position: absolute
+      content: ""
+      top: 10px
+      left: 0    
+      transition: .3s all ease
+      @include respond(phone_600)
+        top: 8px
+
+  &__background
+    position: absolute
+    top: 0
+    right: 0
+    width: 72px
+    height: 72px
+    border-radius: 50%
+    background: radial-gradient($color-brown-light, $color-brown-dark)
+    z-index: 100
+    transform: scale(0)
+    transition: 1s all ease
+    @include respond(phone_600)
+      width: 52px
+      height: 52px
+
+  &__nav
+    display: grid    
+    height: 100%
+    overflow-y: auto
+    overflow-x: clip
+    width: 0
+    position: fixed
+    top: 0
+    right: 0
+    z-index: 150
+    opacity: 0
+    transition: 1s all ease
+
+  &__list
+    width: 100%
+    display: grid
+    justify-content: center
+    align-content: center
+    justify-items: center
+    padding: 60px 0
+    gap: 60px
+    @include respond(phone_600)
+      gap: 20px
+
+  &__link
+    display: inline-block
+    text-align: center
+    padding: 10px 20px
+    font-family: 'Inter'
+    font-size: 40px
+    font-weight: 300
+    letter-spacing: .13em
+    white-space: nowrap
+    text-transform: uppercase
+    color: $color-white
+    background: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%)
+    background-size: 250%
+    transition: 1s all ease
+    @include respond(phone_600)
+      font-size: 20px
+
+    
+    &:hover
+      background-position: 100%
+      color: $color-brown-dark
+      transform: translateX(10px)
+
+  &__input
+    display: none
+    &:checked ~ .menu__background
+      transform: scale(150)
+    &:checked ~ .menu__nav
+      width: 100%
+      opacity: 1
+    &:checked + .menu__label .menu__icon
+      background-color: transparent
+    &:checked + .menu__label .menu__icon::before
+      top: 0
+      transform: rotate(135deg)
+    &:checked + .menu__label .menu__icon::after
+      top: 0
+      transform: rotate(-135deg)
+
+      
+      
