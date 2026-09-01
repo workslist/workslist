@@ -16,6 +16,13 @@
     background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/h_bg.png) top center / cover no-repeat
     clip-path: polygon(100% 0%, 100% 100%, 0% 80%, 0% 0%)
     z-index: -1
+  &::after
+    content: ""
+    height: 100%
+    width: 100%
+    position: absolute
+    background-color: $color-lite-gray
+    z-index: -2
   
   &__icon
     grid-column: 2 / 3

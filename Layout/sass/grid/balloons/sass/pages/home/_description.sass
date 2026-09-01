@@ -3,17 +3,16 @@
 .description
   display: grid
   justify-content: center
-  grid-template-columns: minmax(25px, 1fr) minmax(min-content, 532px) minmax(min-content, 577px) minmax(25px, 1fr)
+  grid-template-columns: minmax(25px, 1fr) minmax(min-content, 532px) minmax(350px, 577px) minmax(25px, 1fr)
   padding: 80px 0 54px
-  gap: 30px
+  // gap: 30px
 
   &__group
-    grid-column: 2 / 3
-    grid-row: span 1
+    grid-column: 2 / 3    
 
   &__images
     grid-column: 3 / 4
-    grid-row: span 2
+    padding-left: 20px  
 
     img
       width: 100%
