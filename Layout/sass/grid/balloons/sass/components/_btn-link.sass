@@ -47,7 +47,30 @@
 
   &--description
     grid-column: 2 / -2
-
+    font-weight: 700
+    letter-spacing: 0.13em
+    color: $color-gray
+    width: fit-content
+    padding: 14px 15px
+    border-bottom: 1px solid $color-brown-light
+    
+    transition: .3s all ease
     svg
       width: 18px
       height: 8px
+      fill: $color-gray
+      margin-left: 11px
+    
+      transition: .3s all ease
+    
+    &:hover
+      background-color: $color-brown-light
+      color: $color-white
+      svg
+        fill: $color-white
+    
+    &:active
+      background-color: $color-brown-dark
+      color: $color-white
+      svg
+        fill: $color-white
