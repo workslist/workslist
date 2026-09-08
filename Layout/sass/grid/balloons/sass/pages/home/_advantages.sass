@@ -1,0 +1,43 @@
+/* advantages */  
+
+.advantages
+  position: relative
+  display: grid
+  justify-items: center
+  grid-template-columns: minmax(20px, 1fr) minmax(min-content, 1140px) minmax(20px, 1fr)
+  padding: 216px 0
+  @include respond(laptop_1240)
+    padding: 100px 0
+  
+  &::before
+    content: ""
+    position: absolute
+    inset: 0
+    background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/advantages_bg.jpg) bottom center / cover no-repeat
+    clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 80%)
+    @include respond(laptop_1240)
+      clip-path: polygon(0% 0%, 100% 3%, 100% 100%, 0% 97%)
+
+  &__group
+    grid-column: 2 / -2
+    width: 100%
+    display: grid
+    justify-content: center      
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))
+    gap: 60px
+    z-index: 100
+    @include respond(laptop_1240)
+      gap: 30px
+
+  &__card
+    display: grid
+    justify-items: center
+    min-height: 300px
+    padding: 25px 25px 29px
+    border-radius: 5px
+    background-color: rgba(255, 255, 255, 0.8)
+
+    img
+      width: 65px
+      height: 65px
+    

@@ -245,12 +245,17 @@ body {
   }
 }
 
-.subject--description {
+.subject {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.1em;
   color: #777777;
+}
+.subject--description {
   padding-bottom: 10px;
+}
+.subject--advantages {
+  padding: 17px 0;
 }
 
 .descr--header {
@@ -279,6 +284,11 @@ body {
   line-height: 140%;
   letter-spacing: 0.13em;
   color: #777777;
+}
+.descr--advantages {
+  letter-spacing: 0.13em;
+  color: #777777;
+  text-align: center;
 }
 
 /* animation */
@@ -654,4 +664,59 @@ body {
       -ms-transform: scale(1.1);
           transform: scale(1.1);
   z-index: 20;
+}
+
+/* advantages */
+.advantages {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: minmax(20px, 1fr) minmax(-webkit-min-content, 1140px) minmax(20px, 1fr);
+  grid-template-columns: minmax(20px, 1fr) minmax(min-content, 1140px) minmax(20px, 1fr);
+  padding: 216px 0;
+}
+@media only screen and (max-width: 1240px) {
+  .advantages {
+    padding: 100px 0;
+  }
+}
+.advantages::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/advantages_bg.jpg) bottom center/cover no-repeat;
+  clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 80%);
+}
+@media only screen and (max-width: 1240px) {
+  .advantages::before {
+    clip-path: polygon(0% 0%, 100% 3%, 100% 100%, 0% 97%);
+  }
+}
+.advantages__group {
+  grid-column: 2/-2;
+  width: 100%;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 60px;
+  z-index: 100;
+}
+@media only screen and (max-width: 1240px) {
+  .advantages__group {
+    gap: 30px;
+  }
+}
+.advantages__card {
+  display: grid;
+  justify-items: center;
+  min-height: 300px;
+  padding: 25px 25px 29px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.advantages__card img {
+  width: 65px;
+  height: 65px;
 }/*# sourceMappingURL=main.css.map */
