@@ -695,11 +695,14 @@ body {
 .advantages__group {
   grid-column: 2/-2;
   width: 100%;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 60px;
   z-index: 100;
 }
@@ -709,6 +712,9 @@ body {
   }
 }
 .advantages__card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 240px;
+          flex: 1 1 240px;
   display: grid;
   justify-items: center;
   min-height: 300px;

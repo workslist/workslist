@@ -21,15 +21,24 @@
   &__group
     grid-column: 2 / -2
     width: 100%
-    display: grid
-    justify-content: center      
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))
+    // display: grid
+    // justify-content: center      
+    // grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))
+    // gap: 60px
+
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
     gap: 60px
+
+
+
     z-index: 100
     @include respond(laptop_1240)
       gap: 30px
 
   &__card
+    flex: 1 1 240px
     display: grid
     justify-items: center
     min-height: 300px
