@@ -715,6 +715,16 @@ body {
   padding: 25px 25px 29px;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.advantages__card:hover {
+  scale: 1.03;
+  -webkit-transform: translateY(-3%);
+      -ms-transform: translateY(-3%);
+          transform: translateY(-3%);
 }
 .advantages__card img {
   width: 65px;
