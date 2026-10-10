@@ -6,7 +6,7 @@
   justify-items: center
   grid-template-columns: minmax(20px, 1fr) minmax(min-content, 1140px) minmax(20px, 1fr)
   padding: 216px 0
-  @include respond(laptop_1240)
+  @include respond(laptop)
     padding: 100px 0
   
   &::before
@@ -15,7 +15,7 @@
     inset: 0
     background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/advantages_bg.jpg) bottom center / cover no-repeat
     clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 80%)
-    @include respond(laptop_1240)
+    @include respond(laptop)
       clip-path: polygon(0% 0%, 100% 3%, 100% 100%, 0% 97%)
 
   &__group
@@ -26,7 +26,7 @@
     justify-content: center
     gap: 60px
     z-index: 100
-    @include respond(laptop_1240)
+    @include respond(laptop)
       gap: 30px
 
   &__card

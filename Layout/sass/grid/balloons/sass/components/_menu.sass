@@ -20,13 +20,13 @@
     transition: 1s all ease
     &:hover .menu__icon::before
       top: -12px
-      @include respond(phone_600)
+      @include respond(phone)
         top: -10px
     &:hover .menu__icon::after
       top: 12px
-      @include respond(phone_600)
+      @include respond(phone)
         top: 10px
-    @include respond(phone_600)
+    @include respond(phone)
       width: 52px
       height: 52px
       
@@ -34,7 +34,7 @@
     @include menu_icon
     position: relative
     margin-top: 35px
-    @include respond(phone_600)
+    @include respond(phone)
       margin-top: 25px
 
     &::before
@@ -44,7 +44,7 @@
       top: -10px
       left: 0
       transition: .3s all ease
-      @include respond(phone_600)
+      @include respond(phone)
         top: -8px
     &::after
       @include menu_icon
@@ -53,7 +53,7 @@
       top: 10px
       left: 0    
       transition: .3s all ease
-      @include respond(phone_600)
+      @include respond(phone)
         top: 8px
 
   &__background
@@ -67,7 +67,7 @@
     z-index: 100
     transform: scale(0)
     transition: 1s all ease
-    @include respond(phone_600)
+    @include respond(phone)
       width: 52px
       height: 52px
 
@@ -92,7 +92,7 @@
     justify-items: center
     padding: 60px 0
     gap: 60px
-    @include respond(phone_600)
+    @include respond(phone)
       gap: 20px
 
   &__link
@@ -109,7 +109,7 @@
     background: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%)
     background-size: 250%
     transition: 1s all ease
-    @include respond(phone_600)
+    @include respond(phone)
       font-size: 20px
 
     

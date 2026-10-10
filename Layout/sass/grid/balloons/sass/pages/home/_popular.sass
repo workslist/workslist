@@ -1,4 +1,51 @@
 /* popular */  
 
 .popular
-  
+  padding: 80px 0 85px
+  display: grid
+  grid-template-columns: minmax(20px, 1fr) minmax(min-content, 1140px) minmax(20px, 1fr)
+
+  &__group
+    grid-column: 2 / -2
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 60px
+    @include respond(laptop)
+      gap: 30px
+    
+  &__card
+    flex: 0 1 340px // Дочерние
+    position: relative 
+    perspective: 900px
+    height: 520px
+
+    &-side
+      position: absolute
+      width: 100%
+      top: 0
+      left: 0
+      height: 520px
+
+      backface-visibility: hidden
+      transition: .8s all ease
+      
+      &--front
+        border-radius: 3px
+        box-shadow: $box-shadow
+
+      &--back            
+        transform: rotateY(180deg)
+        background: linear-gradient(120deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-brown-dark, 0.7) 99.94%)
+    
+    &:hover &-side--front
+      transform: rotateY(180deg)
+    
+    &:hover &-side--back
+      transform: rotateY(0deg)
+      
+  &__texsts
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 20px

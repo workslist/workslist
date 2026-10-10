@@ -5,7 +5,7 @@
   justify-content: center
   grid-template-columns: minmax(25px, 1fr) minmax(min-content, 532px) minmax(350px, 577px) minmax(25px, 1fr)
   padding: 80px 0 54px
-  @include respond(tablet_900)  
+  @include respond(tablet)  
     grid-template-columns: 25px 1fr 25px
     grid-template-rows: repeat(3, min-content)
   
@@ -19,7 +19,7 @@
   &__images
     position: relative
     grid-column: 3 / 4
-    @include respond(tablet_900)
+    @include respond(tablet)
       grid-column: 2 / 3
       grid-row: 2 / 3
       display: grid
@@ -36,7 +36,7 @@
     box-shadow: $box-shadow
     border-radius: 5px
     transition: 0.3s all ease
-    @include respond(tablet_900)
+    @include respond(tablet)
       position: static
       max-width: 100%
 
@@ -44,9 +44,9 @@
       top: 164px
       left: 60px
       z-index: 2
-      @include respond(laptop_1240)
+      @include respond(laptop)
         top: 134px
-      @include respond(tablet_900)
+      @include respond(tablet)
         grid-column: 3 / 10
         grid-row: 6 / -1   
 
@@ -54,14 +54,14 @@
       top: 89px
       right: 0
       z-index: 1
-      @include respond(tablet_900)
+      @include respond(tablet)
         grid-column: 6 / -1
         grid-row: 3 / 12
 
     &-img3
       top: 0
       left: 38px
-      @include respond(tablet_900)
+      @include respond(tablet)
         grid-column: 1 / 8
         grid-row: 1 / 10
       

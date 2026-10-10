@@ -1,22 +1,22 @@
 // adaptive
 @mixin respond($breakpoint)
 
-  // @include respond(laptop_1240)
-  @if $breakpoint == laptop_1240
+  // @include respond(laptop)
+  @if $breakpoint == laptop
     @media only screen and (max-width: 1240px)
       @content
 
-  // @include respond(tablet_900)
-  @if $breakpoint == tablet_900
+  // @include respond(tablet)
+  @if $breakpoint == tablet
     @media only screen and (max-width: 900px)
       @content
 
-  // @include respond(phone_600)
-  @if $breakpoint == phone_600
+  // @include respond(phone)
+  @if $breakpoint == phone
     @media only screen and (max-width: 600px)
       @content
 
-  // @include respond(desktop_1800)
+  // @include respond(desktop)
   @if $breakpoint == desktop
     @media only screen and (min-width: 1800px)
       @content
