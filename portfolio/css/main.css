@@ -1,0 +1,134 @@
+.mb-18 {
+  margin-bottom: 18px;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/MullerRegular.woff2") format("woff2"), url("../fonts/MullerRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/MullerRegularItalic.woff2") format("woff2"), url("../fonts/MullerRegularItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/MullerMedium.woff2") format("woff2"), url("../fonts/MullerMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/MullerMediumItalic.woff2") format("woff2"), url("../fonts/MullerMediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/MullerBold.woff2") format("woff2"), url("../fonts/MullerBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/MullerBoldItalic.woff2") format("woff2"), url("../fonts/MullerBoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+/* base */
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  list-style: none;
+  font-size: 16px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 100%;
+  color: #000000;
+  border: none;
+}
+
+picture {
+  display: block;
+  font-size: 0;
+}
+
+img {
+  font-size: 0;
+}
+
+html {
+  font-size: 62.5%;
+  min-width: 375px;
+}
+
+a {
+  display: inline-block;
+  cursor: pointer;
+}
+
+button {
+  display: inline-block;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+/* header */
+/* footer */
+/* btn-link */
+.button-border {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 12px 19px;
+  border-radius: 10px;
+  border: 1px solid #ff9797;
+  background-color: transparent;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ff9797;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.button-border:hover {
+  background-color: #5b0000;
+  color: #5b0000;
+}
+.button-border:active {
+  border-color: #ff6262;
+  background-color: #ff6262;
+  color: #ff6262;
+}
+.button-border_contacts {
+  padding: 26px 29.5px;
+}
+
+.link {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  color: #ff9797;
+  line-height: 150%;
+}
+.link:hover {
+  color: #5b0000;
+}
+.link:active {
+  color: #ff6262;
+}
+
+/* typography *//*# sourceMappingURL=main.css.map */
