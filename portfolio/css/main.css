@@ -66,7 +66,6 @@ img {
 
 html {
   font-size: 62.5%;
-  min-width: 375px;
 }
 
 a {
@@ -88,6 +87,48 @@ button {
 }
 
 /* header */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 0 25px;
+  background-color: #EEEEEE;
+}
+.header__container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1350px;
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.header__link {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 110px;
+          flex: 0 1 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 35px;
+  border-radius: 20px;
+  background-color: #b792de;
+}
+
 /* footer */
 /* btn-link */
 .button-border {
