@@ -9,9 +9,6 @@ export function renderLandings() {
    <p class="descr descr--landings">
     Здесь будут мои проекты по вёрстке
    </p>
-   <a class="link link--landings" href="#/">
-    Вернуться на главную
-   </a>
 
   </section>
   `;

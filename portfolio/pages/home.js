@@ -7,7 +7,7 @@ export function renderHome() {
     Портфолио
    </h1>
  
-   <a class="link link--lendings" href="#/landings">
+   <a class="link link--lendings" href="#/landings" data-link>
     Лендинги
    </a>
 
