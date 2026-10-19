@@ -8,7 +8,7 @@ export function renderHeader(path) {
           Назад
         </a>
 
-        <a class="header__link" href="#" data-section>
+        <a class="header__link" href="#" data-section-button>
           В&nbsp;раздел
         </a>
 

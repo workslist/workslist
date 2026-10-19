@@ -9,6 +9,7 @@ export function renderLandings() {
    <p class="descr descr--landings">
     Здесь будут мои проекты по вёрстке
    </p>
+   <a href="#/project/lagoona" data-link data-section="/landings">lagoona</a>
 
   </section>
   `;
