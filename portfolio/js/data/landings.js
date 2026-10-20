@@ -5,5 +5,10 @@ export const landings = {
       title: "Lagoona",
       path: "../Layout/sass/flex/Lagoona/index.html",
       section: "/landings"
+    },
+    "/project/evklid": {
+      title: "evklid",
+      path: "../Layout/sass/flex/evklid/index.html",
+      section: "/landings"
     }
 }

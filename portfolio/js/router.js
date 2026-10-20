@@ -3,6 +3,7 @@
 import { renderHeader } from "./header.js";
 import { renderHome } from "../pages/home.js";
 import { renderLandings } from "../pages/landings.js";
+import { renderEmail } from "../pages/email.js";
 import { renderProject } from "../pages/project.js";
 import { projects } from "./data/projects.js";
 
@@ -11,15 +12,9 @@ let currentSection = "/";
 
 const routes = {
   "/": renderHome,
-  "/landings": renderLandings
+  "/landings": renderLandings,
+  "/email": renderEmail
 }
-
-// const projects = {
-//   "/project/lagoona": {
-//     path: "../Layout/sass/flex/Lagoona/index.html",
-//     section: "/landings"
-//   }
-// }
 
 export function navigate(path, option = {}) {
   const currentPath = location.hash.slice(1) || "/";
