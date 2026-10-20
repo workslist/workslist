@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @font-face {
   font-family: "Muller";
   src: url("../fonts/MullerRegular.woff2") format("woff2"), url("../fonts/MullerRegular.woff") format("woff");
@@ -44,7 +45,7 @@
   text-decoration: none;
   list-style: none;
   font-size: 16px;
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: "Gruppo", Arial, Helvetica, sans-serif;
   font-weight: 400;
   line-height: 100%;
   color: #000000;
@@ -87,45 +88,50 @@ button {
   position: sticky;
   top: 0;
   width: 100%;
-  padding: 0 25px;
-  background-color: #EEEEEE;
+  height: 75px;
+  background: -webkit-gradient(linear, left top, right top, from(#38a9c8), to(#481c6f));
+  background: linear-gradient(90deg, #38a9c8 0%, #481c6f 100%);
+  display: grid;
+  grid-template-columns: minmax(115px, 1fr) minmax(-webkit-min-content, 970px) minmax(115px, 1fr);
+  grid-template-columns: minmax(115px, 1fr) minmax(min-content, 970px) minmax(115px, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.header__container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1350px;
+.header__link {
+  grid-column: 2/3;
+  margin-left: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: 16px;
 }
-.header__link {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 110px;
-          flex: 0 1 110px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 10px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 35px;
-  border-radius: 20px;
-  background-color: #b792de;
+.header__link span {
+  padding-bottom: 8px;
+  font-size: 50px;
+  color: #ffffff;
+  -webkit-text-stroke: 2px #ffffff;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
-.header__link--hidden {
-  display: none;
+.header__link:hover span {
+  color: #ACE6FF;
+  -webkit-text-stroke: 2px #ACE6FF;
+}
+.header__link:active span {
+  color: #27BDFD;
+  -webkit-text-stroke: 2px #27BDFD;
+}
+.header__link img {
+  width: 56px;
+  height: 55px;
 }
 
 /* footer */

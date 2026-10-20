@@ -4,29 +4,41 @@
   position: sticky
   top: 0
   width: 100%
-  padding: 0 25px
-  background-color: #EEEEEE
-
-
-  &__container
-    margin: 0 auto
-    width: 100%
-    max-width: 1350px
-    height: 75px
-    display: flex
-    justify-content: space-between
-    align-items: center
-    gap: 20px
+  height: 75px
+  background: linear-gradient(90deg, #38a9c8 0%, #481c6f 100%)
+  display: grid
+  grid-template-columns: minmax(115px, 1fr) minmax(min-content, 970px) minmax(115px, 1fr)
+  align-items: center
     
   &__link
-    flex: 0 1 110px
+    grid-column: 2 / 3
+    margin-left: auto
+    width: fit-content
+    height: 75px
     display: flex
-    padding: 0 10px
-    justify-content: center
-    align-items: center
-    height: 35px
-    border-radius: 20px
-    background-color: #b792de
+    align-items: center    
+    gap: 16px
 
-    &--hidden
-      display: none
+    span
+      padding-bottom: 8px
+      font-size: 50px
+      color: $color-white
+      -webkit-text-stroke: 2px $color-white  
+    
+      transition: .3s all ease  
+      
+    &:hover
+      span
+        color: $color-lite-blue
+        -webkit-text-stroke: 2px $color-lite-blue
+          
+    &:active
+      span
+        color: $color-blue
+        -webkit-text-stroke: 2px $color-blue
+    
+    img
+      width: 56px
+      height: 55px
+
+  
