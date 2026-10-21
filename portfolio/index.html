@@ -17,11 +17,42 @@
 
  <header class="header">
 
-  <a class="header__link" href="#/">
+  <a class="header__link header__back" data-back href="#">
+   <svg>
+    <use xlink:href="img/sprite.svg#h_back"></use>
+   </svg>
+  </a>
+
+  <a class="header__logo" href="#/">
    <span>worksList</span>
    <img src="./img/logo.svg" alt="">
    <!-- <img src="../portfolio/img/logo.svg" alt=""> -->
   </a>
+
+  <svg width="19" height="41" viewBox="0 0 19 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M17.1918 1.50007L1.7123 21.2959C1.41175 21.6803 1.43245 22.2254 1.76129 22.5859L17.1918 39.5001" stroke-width="3" stroke-linecap="round"/>
+  </svg>
+
+  <a class="header__link header__all" data-section-button href="#">
+   <span>all</span>
+  </a>
+
+  <!-- старый -->
+  <!-- <div class="header__container">
+
+        <a class="header__link" href="#" data-back>
+          Назад
+        </a>
+
+        <a class="header__link" href="#" data-section-button>
+          В&nbsp;раздел
+        </a>
+
+        <a class="header__link" href="#/">
+          Главная
+        </a>
+
+      </div> -->
 
  </header>
 
@@ -33,7 +64,7 @@
 
  <footer class="footer">
 
-  <div class="container footer__container">
+  <div class="container footer__container" style="height: 1000px;">
 
    footer
 

@@ -52,12 +52,12 @@ function updateHeader(path) {
   const sectionButton = document.querySelector("[data-section-button]");
 
   if (backButton) {
-    backButton.classList.toggle("header__link--hidden", path === "/");
+    backButton.classList.toggle("display-hidden", path === "/");
   }
 
   if (sectionButton) {
     const isProject = path.startsWith("/project/");
-    sectionButton.classList.toggle("header__link--hidden", !isProject);
+    sectionButton.classList.toggle("display-hidden", !isProject);
   }  
 
 }

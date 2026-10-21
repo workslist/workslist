@@ -1,4 +1,8 @@
 <svg width="0" height="0" class="hidden">
-  
+    
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 52" id="h_back">
+    <path d="M24.1292 2.50004L2.74531 27.099C2.39895 27.4974 2.42198 28.0964 2.7979 28.4671L24.1292 49.5" stroke-width="5" stroke-linecap="round"></path>
+  </symbol>
+
 
 </svg>
