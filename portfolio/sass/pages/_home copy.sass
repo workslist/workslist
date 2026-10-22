@@ -1,0 +1,47 @@
+/* home */  
+
+.home
+  display: grid
+  // display: flex
+  align-items: center
+  justify-content: center
+  grid-template-columns: repeat(5, auto)
+  // grid-template-columns: minmax(195px, 1fr) minmax(321px, 1fr) minmax(500px, 1fr) minmax(321px, 1fr) minmax(195px, 1fr)
+  // grid-template-rows: 10dvh auto 10dvh
+  grid-template-rows: 90dvh
+  // gap: 0 80px
+  overflow: hidden
+  
+  &__cart
+    // grid-row: 2 / 3
+    display: flex
+    // flex: 1
+    width: 200px
+    height: 250px
+    border-radius: 38px
+    box-shadow: 0 4px 38px 0 rgba(0, 0, 0, 0.22)
+
+    // &:first-child
+    //   // Стили для первого элемента
+    //   transform: scale(0.5)
+
+    // &:last-child
+    //   // Стили для последнего элемента
+    //   transform: scale(0.5)
+    
+    &:nth-child(2)
+      transform: scale(1.6)
+
+    &:nth-child(3)
+      transform: scale(2.5)
+
+    &:nth-child(4)
+      transform: scale(1.6)
+
+    // &--child
+    //   width: 321px
+    //   height: 411px
+    
+    // &--secret
+    //   width: 195px
+    //   height: 249px
