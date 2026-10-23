@@ -1,23 +1,55 @@
 /* home */  
 
 .home
-  
+  overflow: hidden
+
   &__cards
+    width: 100%
+    overflow: hidden
+  
+  &__track
     display: flex
     align-items: center
-    justify-content: center
-    gap: 20px
-    min-height: 500px
+    justify-content: flex-start
+    gap: clamp(12px, 5.2vw, 80px)
+    width: max-content
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    // margin-inline: auto
+    will-change: trnsform
+    // overflow: hidden
+    padding: 50px 0
 
   &__card
-    flex: 0 0 180px
-    height: 240px
+    box-sizing: border-box
+    border: none    
     box-shadow: 0 4px 38px 0 rgba(0, 0, 0, 0.22)
-    border-radius: 38px
+    border-radius: 38px    
 
     display: flex
     align-items: center
     justify-content: center
+    flex-shrink: 0
+    cursor: default
+
+    transition: .6s all ease
+
+    &--far
+      flex: 0 0 clamp(180px, 26vw, 200px)
+      height: clamp(180px, 16.2vw, 250px)
+      opacity: .5
+
+    &--side
+      flex: 0 0 clamp(220px, 20.7vw, 320px)
+      height: clamp(280px, 26.7vw, 410px)
+      opacity: .75
+
+    &--active
+      flex: 0 0 clamp(280px, 32.5vw, 500px)
+      height: clamp(380px, 41vw, 640px)
+      opacity: 1
+      cursor: pointer
   
     &--empty
       background: $color-lite-violet
