@@ -2,54 +2,70 @@
 
 .home
   overflow: hidden
+  height: calc(100vh - 75px)
 
   &__cards
     width: 100%
     overflow: hidden
+
+    display: flex
+    align-items: center
+    height: 100%
   
   &__track
     display: flex
     align-items: center
-    justify-content: flex-start
-    gap: clamp(12px, 5.2vw, 80px)
-    width: max-content
+    justify-content: center
+    gap: clamp(5px, 5.2vw, 80px)    
+    width: 100%
     position: relative
     left: 50%
-    transform: translateX(-50%)
-    // margin-inline: auto
-    will-change: trnsform
-    // overflow: hidden
-    padding: 50px 0
+    transform: translateX(-50%)            
+    will-change: transform    
+    padding: 20px 0
+    @include respond(tablet)
+      gap: 15px
+    @include respond(phone)
+      gap: 10px
 
   &__card
-    box-sizing: border-box
-    border: none    
-    box-shadow: 0 4px 38px 0 rgba(0, 0, 0, 0.22)
-    border-radius: 38px    
-
     display: flex
     align-items: center
     justify-content: center
     flex-shrink: 0
+    box-sizing: border-box
+    border: none    
+    box-shadow: 0 4px 38px 0 rgba(0, 0, 0, 0.22)
+    border-radius: 38px
     cursor: default
-
     transition: .6s all ease
+    @include respond(tablet)
+      border-radius: 28px
+    @include respond(phone)
+      border-radius: 18px
 
     &--far
-      flex: 0 0 clamp(180px, 26vw, 200px)
-      height: clamp(180px, 16.2vw, 250px)
+      flex: 0 0 clamp(1%, 20vw, 100%)
+      height: clamp(18px, 16.2vw, 80vh)
       opacity: .5
+      @include respond(tablet)
+        border-radius: 18px
+      @include respond(phone)
+        border-radius: 8px
 
     &--side
-      flex: 0 0 clamp(220px, 20.7vw, 320px)
-      height: clamp(280px, 26.7vw, 410px)
+      flex: 0 0 clamp(1%, 20.7vw, 100%)
+      height: clamp(28px, 26.7vw, 80vh)
       opacity: .75
 
     &--active
-      flex: 0 0 clamp(280px, 32.5vw, 500px)
-      height: clamp(380px, 41vw, 640px)
+      flex: 0 0 clamp(1%, 32.5vw, 100%)
+      height: clamp(38px, 41vw, 80vh)
       opacity: 1
       cursor: pointer
   
     &--empty
       background: $color-lite-violet
+    
+    &--invisible
+      opacity: 0      
