@@ -4,26 +4,122 @@
   position: sticky
   top: 0
   width: 100%
-  padding: 0 25px
-  background-color: #EEEEEE
+  height: 75px
+  background: linear-gradient(90deg, #38a9c8 0%, #481c6f 100%)
+  display: grid
+  grid-template-columns: minmax(115px, 1fr) minmax(min-content, 970px) minmax(115px, 1fr)
+  align-items: center
+  gap: 25px
+  @include respond(tablet)
+    grid-template-columns: minmax(115px, 1fr) minmax(min-content, 500px) minmax(115px, 1fr)
+  @include respond(phone)
+    grid-template-columns: 1fr 66px 1fr    
 
-
-  &__container
-    margin: 0 auto
-    width: 100%
-    max-width: 1350px
+  &__logo
+    grid-column: 2 / 3
+    margin-left: auto
+    width: fit-content
     height: 75px
     display: flex
-    justify-content: space-between
-    align-items: center
-    gap: 20px
+    align-items: center    
+    gap: 16px
+    @include respond(phone)
+      margin: 0 auto
+
+    span
+      padding-bottom: 8px
+      font-size: 50px
+      color: $color-white
+      -webkit-text-stroke: 2px $color-white
+      @include respond(tablet)
+        font-size: 40px
+      @include respond(phone)
+        display: none
     
-  &__link
-    flex: 0 1 110px
+      transition: .3s all ease  
+      
+    &:hover
+      span
+        color: $color-lite-blue
+        -webkit-text-stroke: 2px $color-lite-blue
+          
+    &:active
+      span
+        color: $color-blue
+        -webkit-text-stroke: 2px $color-blue
+    
+    img
+      width: 56px
+      height: 55px
+
+  &__back
+    transform: translateZ(0)
+    grid-column: 1 / 2
     display: flex
-    padding: 0 10px
-    justify-content: center
     align-items: center
-    height: 35px
-    border-radius: 20px
-    background-color: #b792de
+    padding-left: 25px
+    width: 100%
+    height: 75px
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(217, 217, 217, 0) 100%)
+    @include respond(phone)
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.35) 0%, rgba(217, 217, 217, 0) 100%)
+
+    transition: .3s all ease
+
+    svg
+      width: 22px
+      height: 47px
+      stroke: $color-dark-violet
+
+      transition: .3s all ease
+    
+    &:hover 
+      padding-left: 20px
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 0%, rgba(217, 217, 217, 0) 100%)
+      svg
+        stroke: $color-violet
+      
+    &:active 
+      svg
+        stroke: $color-lite-violet
+
+  &__all
+    grid-column: 3 / 4
+    position: absolute
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: end    
+    width: 100%
+    transition: .3s all ease
+    span
+      display: flex
+      justify-content: end
+      align-items: center
+      height: 75px
+      width: 100%
+      max-width: 156px
+      padding-right: 10px
+      padding-bottom: 8px
+      font-size: 90px
+      color: $color-white
+      -webkit-text-stroke: 2px $color-white
+      background: linear-gradient(-90deg, rgba(255, 255, 255, 0.38) 0%, rgba(217, 217, 217, 0) 100%)
+      transition: .3s all ease
+      @include respond(tablet)
+        max-width: 100%
+        font-size: 56px
+      @include respond(phone)
+        background: linear-gradient(-90deg, rgba(255, 255, 255, 0.28) 0%, rgba(217, 217, 217, 0) 100%)
+
+    
+    &:hover
+      background: linear-gradient(-90deg, rgba(255, 255, 255, 0.05) 0%, rgba(217, 217, 217, 0) 100%)
+      span
+        color: $color-lite-blue
+        -webkit-text-stroke: 2px $color-lite-blue
+          
+    &:active
+      span
+        color: $color-blue
+        -webkit-text-stroke: 2px $color-blue

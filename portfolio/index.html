@@ -7,7 +7,7 @@
  <title>workslist</title>
 
  <link rel="stylesheet" href="css/main.css">
- <script type="module" src="./js/app.js"></script>
+ <script defer type="module" src="./js/app.js"></script>
  <!-- <script src="js/router.js"></script> -->
 
 
@@ -17,52 +17,53 @@
 
  <header class="header">
 
-  <div class="header__container">
+  <a class="header__back" data-back href="#">
+   <svg>
+    <use
+         xlink:href="./img/sprite.svg#h_back">
+    </use>
+   </svg>
+  </a>
 
-   <a class="header__link" href="#">
-    Назад
-   </a>
+  <a class="header__logo" href="#/">
+   <span>worksList</span>
+   <img src="./img/logo.svg" alt="">
+  </a>
 
-   <a class="header__link" href="#">
-    В&nbsp;раздел
-   </a>
-
-   <a class="header__link" href="#">
-    Главная
-   </a>
-
-  </div>
+  <a class="header__all" data-section-button href="#">
+   <span>all</span>
+  </a>
 
  </header>
 
  <main id="app" class="main">
 
-
-
-
-
-  <!-- <h1 class="title">title</h1>
-
-  <section class="section margin-section">
-
-   <div class="container" style="height: 1500px; background-color: #570202;">
-
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi eaque maiores odit temporibus quia adipisci incidunt, molestias quas molestiae praesentium reprehenderit nisi nobis expedita! Corrupti quasi nihil porro voluptas quam!
+  <section class="home">
+   
+   <div class="home__cards home__cart--main">
 
    </div>
-  </section> -->
+
+   <div class="home__cart home__cart--child">
+
+   </div>
+
+   <div class="home__cart home__cart--child">
+
+   </div>
+
+   <div class="home__cart home__cart--secret">
+
+   </div>
+
+   <div class="home__cart home__cart--secret">
+
+   </div>
+
+  </section>
 
  </main>
 
- <footer class="footer">
-
-  <div class="container footer__container">
-
-   footer
-
-  </div>
-
- </footer>
 
 
 
