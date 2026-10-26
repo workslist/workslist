@@ -146,6 +146,32 @@ function moveCards(direction) {
 window.addEventListener("wheel", event => {
   if (!document.querySelector(".home__track")) return;
 
-  event.preventDefault();
+  if (window.innerWidth > 900) {
+    event.preventDefault();
+  }
+
   moveCards(event.deltaY > 0 ? 1 : -1);
 }, { passive: false });
+
+let touchStartX = 0;
+let touchStartY = 0;
+
+document.addEventListener("touchstart", event => {
+  if (!event.target.closest(".home__cards")) return;
+
+  touchStartX = event.changedTouches[0].clientX;
+  touchStartY = event.changedTouches[0].clientY;
+}, { passive: true });
+
+document.addEventListener("touchend", event => {
+  if (!event.target.closest(".home__cards")) return;
+
+  const deltaX = event.changedTouches[0].clientX - touchStartX;
+  const deltaY = event.changedTouches[0].clientY - touchStartY;
+
+  // Игнорируем короткие движения и вертикальные свайпы
+  if (Math.abs(deltaX) < 40) return;
+  if (Math.abs(deltaX) < Math.abs(deltaY)) return;
+
+  moveCards(deltaX < 0 ? 1 : -1);
+}, { passive: true });

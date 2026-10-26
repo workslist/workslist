@@ -329,8 +329,19 @@ iframe {
 /* typography */
 /* home */
 .home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
-  height: calc(100vh - 75px);
+  height: calc(100dvh - 75px);
+}
+@media only screen and (max-width: 900px) {
+  .home {
+    overflow-y: auto;
+  }
 }
 .home__cards {
   width: 100%;
@@ -341,7 +352,12 @@ iframe {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
+}
+@media only screen and (max-width: 900px) {
+  .home__cards {
+    overflow-y: auto;
+    height: auto;
+  }
 }
 .home__track {
   display: -webkit-box;
@@ -361,7 +377,7 @@ iframe {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   will-change: transform;
-  padding: 20px 0;
+  padding: 10dvh 0;
 }
 @media only screen and (max-width: 900px) {
   .home__track {
@@ -407,35 +423,47 @@ iframe {
 }
 .home__card--far {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 clamp(1%, 20vw, 100%);
-          flex: 0 0 clamp(1%, 20vw, 100%);
+      -ms-flex: 0 0 20vw;
+          flex: 0 0 20vw;
   height: clamp(18px, 16.2vw, 80vh);
   opacity: 0.5;
+  border-radius: 18px;
 }
 @media only screen and (max-width: 900px) {
   .home__card--far {
-    border-radius: 18px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .home__card--far {
     border-radius: 8px;
+    -ms-flex-preferred-size: 30dvh;
+        flex-basis: 30dvh;
   }
 }
 .home__card--side {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 clamp(1%, 20.7vw, 100%);
-          flex: 0 0 clamp(1%, 20.7vw, 100%);
+      -ms-flex: 0 0 20.7vw;
+          flex: 0 0 20.7vw;
   height: clamp(28px, 26.7vw, 80vh);
   opacity: 0.75;
 }
+@media only screen and (max-width: 900px) {
+  .home__card--side {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+    height: 55dvh;
+  }
+}
 .home__card--active {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 clamp(1%, 32.5vw, 100%);
-          flex: 0 0 clamp(1%, 32.5vw, 100%);
+      -ms-flex: 0 0 32.5vw;
+          flex: 0 0 32.5vw;
   height: clamp(38px, 41vw, 80vh);
   opacity: 1;
   cursor: pointer;
+}
+@media only screen and (max-width: 900px) {
+  .home__card--active {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    height: 70dvh;
+  }
 }
 .home__card--empty {
   background: #B3A2D1;

@@ -1,28 +1,33 @@
 /* home */  
 
 .home
+  display: flex
+  align-items: center
   overflow: hidden
-  height: calc(100vh - 75px)
+  height: calc(100dvh - 75px)
+  @include respond(tablet)
+    overflow-y: auto    
 
   &__cards
     width: 100%
     overflow: hidden
-
     display: flex
-    align-items: center
-    height: 100%
+    align-items: center    
+    @include respond(tablet)
+      overflow-y: auto
+      height: auto
   
   &__track
     display: flex
     align-items: center
     justify-content: center
     gap: clamp(5px, 5.2vw, 80px)    
-    width: 100%
+    width: 100%    
     position: relative
     left: 50%
     transform: translateX(-50%)            
     will-change: transform    
-    padding: 20px 0
+    padding: 10dvh 0
     @include respond(tablet)
       gap: 15px
     @include respond(phone)
@@ -40,32 +45,40 @@
     cursor: default
     transition: .6s all ease
     @include respond(tablet)
-      border-radius: 28px
+      border-radius: 28px      
     @include respond(phone)
       border-radius: 18px
 
-    &--far
-      flex: 0 0 clamp(1%, 20vw, 100%)
+    &--far      
+      flex: 0 0 20vw
       height: clamp(18px, 16.2vw, 80vh)
       opacity: .5
+      border-radius: 18px
       @include respond(tablet)
-        border-radius: 18px
-      @include respond(phone)
         border-radius: 8px
+        flex-basis: 30dvh
 
-    &--side
-      flex: 0 0 clamp(1%, 20.7vw, 100%)
+    &--side      
+      flex: 0 0 20.7vw
       height: clamp(28px, 26.7vw, 80vh)
       opacity: .75
+      @include respond(tablet)     
+        flex-basis: 70%
+        height: 55dvh
 
-    &--active
-      flex: 0 0 clamp(1%, 32.5vw, 100%)
+
+    &--active      
+      flex: 0 0 32.5vw
       height: clamp(38px, 41vw, 80vh)
       opacity: 1
       cursor: pointer
+      @include respond(tablet)        
+        flex-basis: 80%
+        height: 70dvh
   
     &--empty
       background: $color-lite-violet
     
     &--invisible
       opacity: 0      
+
