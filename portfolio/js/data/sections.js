@@ -3,15 +3,18 @@
 export const sections = [
   {
     title: "Лендинги",
-    path: "/landings"
+    path: "/landings",
+    background: "./portfolio/img/home_landings.png"
   },
   {
     title: "emails",
-    path: "/emails"
+    path: "/emails",
+    background: "./portfolio/img/home_emails.png"
   },
   {
     title: "apps",
-    path: "/apps"
+    path: "/apps",
+    background: "./portfolio/img/home_apps.png"
   },
   // {
   //   title: "page1",

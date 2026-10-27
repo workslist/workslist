@@ -5,8 +5,16 @@ import { sections } from "../js/data/sections.js";
 let activeIndex = 0;
 let isScrolling = false;
 
-const getIndex = index =>
-  (index + sections.length) % sections.length;
+const getIndex = index => (index + sections.length) % sections.length;
+
+function updateBackground(index) {
+  const home = document.querySelector(".home");
+  const section = sections[getIndex(index)];
+
+  if (!home || !section) return;
+
+  home.style.backgroundImage = `url("${section.background}")`;
+}
 
 function getCardClass(index) {
   if (index === 3) return "home__card--active";
@@ -142,6 +150,51 @@ function moveCards(direction) {
 
   track.addEventListener("transitionend", finishMove);
 }
+
+// Управление стрелками
+document.addEventListener("keydown", event => {
+  if (!document.querySelector(".home__track")) return;
+
+  // Не перехватываем стрелки при вводе текста
+  if (
+    event.target.matches("input, textarea, select") ||
+    event.target.isContentEditable
+  ) {
+    return;
+  }
+
+  if (event.key === "ArrowLeft") {
+    event.preventDefault();
+    moveCards(-1);
+  }
+
+  if (event.key === "ArrowRight") {
+    event.preventDefault();
+    moveCards(1);
+  }
+});
+
+// Клики справа и слева от карточки
+document.addEventListener("click", event => {
+  const container = event.target.closest(".home__cards");
+  if (!container) return;
+  const card = event.target.closest(".home__card");
+
+  if (card?.classList.contains("home__card--active")) return;
+
+  const activeCard = document.querySelector(".home__card--active");
+  if (!activeCard) return;
+
+  const rect = activeCard.getBoundingClientRect();
+
+  if (event.clientX < rect.left) {
+    event.preventDefault();
+    moveCards(-1);
+  } else if (event.clientX > rect.right) {
+    event.preventDefault();
+    moveCards(1);
+  }
+});
 
 window.addEventListener("wheel", event => {
   if (!document.querySelector(".home__track")) return;

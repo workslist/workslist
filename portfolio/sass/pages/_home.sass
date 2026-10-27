@@ -42,6 +42,7 @@
     border: none    
     box-shadow: 0 4px 38px 0 rgba(0, 0, 0, 0.22)
     border-radius: 38px
+    background-color: $color-white
     cursor: default
     transition: .6s all ease
     @include respond(tablet)
@@ -54,6 +55,7 @@
       height: clamp(18px, 16.2vw, 80vh)
       opacity: .5
       border-radius: 18px
+      pointer-events: none
       @include respond(tablet)
         border-radius: 8px
         flex-basis: 30dvh
@@ -62,6 +64,7 @@
       flex: 0 0 20.7vw
       height: clamp(28px, 26.7vw, 80vh)
       opacity: .75
+      pointer-events: none
       @include respond(tablet)     
         flex-basis: 70%
         height: 55dvh
