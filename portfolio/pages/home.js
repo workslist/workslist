@@ -1,3 +1,4 @@
+
 'use strict';
 
 import { sections } from "../js/data/sections.js";
@@ -6,15 +7,6 @@ let activeIndex = 0;
 let isScrolling = false;
 
 const getIndex = index => (index + sections.length) % sections.length;
-
-function updateBackground(index) {
-  const home = document.querySelector(".home");
-  const section = sections[getIndex(index)];
-
-  if (!home || !section) return;
-
-  home.style.backgroundImage = `url("${section.background}")`;
-}
 
 function getCardClass(index) {
   if (index === 3) return "home__card--active";
@@ -32,16 +24,19 @@ function renderCards() {
     return `
       <a
         class="home__card ${getCardClass(index)} ${isContentCard ? "" : "home__card--empty"} ${index === 0 || index === 6 ? "home__card--invisible" : ""}"
-        ${index === 3 ? `href="#${section.path}" data-link` : ""}
+        ${index === 3 && section ? `href="#${section.path}" data-link` : ""}
         data-index="${index}"
-      >${section ? section.title : ""}</a>
+      >
+        <h1 class="home__card--title">${section ? section.title : ""}</h1>
+        <p class="home__card--description">${section ? section.description ?? "" : ""}</p>
+      </a>
     `;
   }).join("");
 }
 
 export function renderHome() {
   return `
-    <section class="home">
+    <section class="home home--${sections[activeIndex].path.slice(1)}">
       <div class="home__cards">
         <div class="home__track">
           ${renderCards()}
@@ -58,9 +53,16 @@ function updateCards(cards, nextActiveIndex) {
       ? sections[getIndex(nextActiveIndex + index - 3)]
       : null;
 
-    card.textContent = section ? section.title : "";
+    const title = card.querySelector(".home__card--title");
+    const description = card.querySelector(".home__card--description");
+
+    // Обновляем текст, не удаляя HTML-элементы
+    title.textContent = section ? section.title : "";
+    description.textContent = section ? section.description ?? "" : "";
+
     card.dataset.index = index;
 
+    // Обновляем ссылку центральной карточки
     if (index === 3 && section) {
       card.href = `#${section.path}`;
       card.setAttribute("data-link", "");
@@ -69,6 +71,7 @@ function updateCards(cards, nextActiveIndex) {
       card.removeAttribute("data-link");
     }
 
+    // Обновляем классы карточек
     card.classList.remove(
       "home__card--far",
       "home__card--side",
@@ -110,10 +113,13 @@ function moveCards(direction) {
 
   const nextActiveIndex = getIndex(activeIndex + direction);
 
-  // Сразу обновляем содержимое карточек
+  const home = document.querySelector(".home");
+
+  home.classList.remove(`home--${sections[activeIndex].path.slice(1)}`);
+  home.classList.add(`home--${sections[nextActiveIndex].path.slice(1)}`);
+
   updateCards(nextCards, nextActiveIndex);
 
-  // Подготавливаем движение
   track.style.transition = "none";
   track.style.transform = "translateX(-50%)";
   track.getBoundingClientRect();
@@ -137,7 +143,6 @@ function moveCards(direction) {
 
     const updatedCards = [...track.querySelectorAll(".home__card")];
 
-    // Возвращаем трек в исходное положение без анимации
     track.style.transition = "none";
     track.style.transform = "translateX(-50%)";
 
@@ -155,7 +160,6 @@ function moveCards(direction) {
 document.addEventListener("keydown", event => {
   if (!document.querySelector(".home__track")) return;
 
-  // Не перехватываем стрелки при вводе текста
   if (
     event.target.matches("input, textarea, select") ||
     event.target.isContentEditable
@@ -174,10 +178,11 @@ document.addEventListener("keydown", event => {
   }
 });
 
-// Клики справа и слева от карточки
+// Клики слева и справа от центральной карточки
 document.addEventListener("click", event => {
   const container = event.target.closest(".home__cards");
   if (!container) return;
+
   const card = event.target.closest(".home__card");
 
   if (card?.classList.contains("home__card--active")) return;
@@ -196,6 +201,7 @@ document.addEventListener("click", event => {
   }
 });
 
+// Прокрутка колёсиком
 window.addEventListener("wheel", event => {
   if (!document.querySelector(".home__track")) return;
 
@@ -206,6 +212,7 @@ window.addEventListener("wheel", event => {
   moveCards(event.deltaY > 0 ? 1 : -1);
 }, { passive: false });
 
+// Свайпы на сенсорном экране
 let touchStartX = 0;
 let touchStartY = 0;
 
@@ -222,7 +229,6 @@ document.addEventListener("touchend", event => {
   const deltaX = event.changedTouches[0].clientX - touchStartX;
   const deltaY = event.changedTouches[0].clientY - touchStartY;
 
-  // Игнорируем короткие движения и вертикальные свайпы
   if (Math.abs(deltaX) < 40) return;
   if (Math.abs(deltaX) < Math.abs(deltaY)) return;
 

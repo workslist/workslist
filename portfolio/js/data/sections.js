@@ -2,38 +2,21 @@
 
 export const sections = [
   {
-    title: "Лендинги",
-    path: "/landings",
-    background: "./portfolio/img/home_landings.png"
+    title: "Landings",
+    path: "/landings",    
+    backgroundClass: "landings",
+    description : "hfhdfdhjdjdj"
   },
   {
     title: "emails",
-    path: "/emails",
-    background: "./portfolio/img/home_emails.png"
+    path: "/emails",    
+    backgroundClass: "emails",
+    description : "hfhdfdhjdjdj"
   },
   {
     title: "apps",
-    path: "/apps",
-    background: "./portfolio/img/home_apps.png"
+    path: "/apps",    
+    backgroundClass: "apps",
+    description : "hfhdfdhjdjdj"
   },
-  // {
-  //   title: "page1",
-  //   path: "/page1"
-  // },
-  // {
-  //   title: "page2",
-  //   path: "/page2"
-  // },
-  // {
-  //   title: "apps3",
-  //   path: "/apps3"
-  // },
-  // {
-  //   title: "apps4",
-  //   path: "/apps4"
-  // },
-  // {
-  //   title: "apps5",
-  //   path: "/apps5"
-  // }
 ]
