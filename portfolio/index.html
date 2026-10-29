@@ -39,26 +39,11 @@
  <main id="app" class="main">
 
   <section class="home">
-   
-   <div class="home__cards home__cart--main">
 
-   </div>
-
-   <div class="home__cart home__cart--child">
-
-   </div>
-
-   <div class="home__cart home__cart--child">
-
-   </div>
-
-   <div class="home__cart home__cart--secret">
-
-   </div>
-
-   <div class="home__cart home__cart--secret">
-
-   </div>
+   <a class="home__card">
+    <h1 class="home__content home__title">${section ? section.title : ""}</h1>
+    <p class="home__content home__description">${section ? section.description ?? "" : ""}</p>
+   </a>
 
   </section>
 

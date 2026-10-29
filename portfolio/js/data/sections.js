@@ -3,20 +3,17 @@
 export const sections = [
   {
     title: "Landings",
-    path: "/landings",    
-    backgroundClass: "landings",
+    path: "/landings",        
+    description : "hfhd fdsss ssddffs"
+  },
+  {
+    title: "Emails",
+    path: "/emails",        
     description : "hfhdfdhjdjdj"
   },
   {
-    title: "emails",
-    path: "/emails",    
-    backgroundClass: "emails",
-    description : "hfhdfdhjdjdj"
-  },
-  {
-    title: "apps",
-    path: "/apps",    
-    backgroundClass: "apps",
+    title: "Apps",
+    path: "/apps",        
     description : "hfhdfdhjdjdj"
   },
 ]

@@ -27,8 +27,8 @@ function renderCards() {
         ${index === 3 && section ? `href="#${section.path}" data-link` : ""}
         data-index="${index}"
       >
-        <h1 class="home__card--title">${section ? section.title : ""}</h1>
-        <p class="home__card--description">${section ? section.description ?? "" : ""}</p>
+        <h1 class="home__title">${section ? section.title : ""}</h1>
+        <p class="home__descr">${section ? section.description ?? "" : ""}</p>
       </a>
     `;
   }).join("");
@@ -36,7 +36,7 @@ function renderCards() {
 
 export function renderHome() {
   return `
-    <section class="home home--${sections[activeIndex].path.slice(1)}">
+    <section class="home">
       <div class="home__cards">
         <div class="home__track">
           ${renderCards()}
@@ -53,8 +53,9 @@ function updateCards(cards, nextActiveIndex) {
       ? sections[getIndex(nextActiveIndex + index - 3)]
       : null;
 
-    const title = card.querySelector(".home__card--title");
-    const description = card.querySelector(".home__card--description");
+    const title = card.querySelector(".home__title");
+    const description = card.querySelector(".home__descr");
+    const content = card.querySelector(".home__content");
 
     // Обновляем текст, не удаляя HTML-элементы
     title.textContent = section ? section.title : "";
@@ -111,12 +112,7 @@ function moveCards(direction) {
     ? [...cards.slice(1), cards[0]]
     : [cards[6], ...cards.slice(0, 6)];
 
-  const nextActiveIndex = getIndex(activeIndex + direction);
-
-  const home = document.querySelector(".home");
-
-  home.classList.remove(`home--${sections[activeIndex].path.slice(1)}`);
-  home.classList.add(`home--${sections[nextActiveIndex].path.slice(1)}`);
+  const nextActiveIndex = getIndex(activeIndex + direction);  
 
   updateCards(nextCards, nextActiveIndex);
 

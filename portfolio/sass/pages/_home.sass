@@ -5,34 +5,7 @@
   align-items: center
   overflow: hidden
   height: calc(100dvh - 75px)
-  // background-size: cover
-  background: linear-gradient(90deg, rgba(197, 220, 255, 0.84) 0%, rgba(214, 231, 255, 0) 36.67%)
-
-  transition: all 3s ease
-  &--landings    
-    // background-image: url("../img/home_landings.svg")
-    // background-color: #ffaaaa      
-    background-color: #ffaaaa      
-
-    &::before
-      // background-image: url("../img/home_landings.svg")
-      // animation: backgroundFade 3s ease forwards
-      // background-color: #ffaaaa      
-
-  &--emails
-    // background-image: url(../img/home_emails.png)
-    // background-color: #d77bff
-    &::before
-      // background-image: url("../img/home_emails.svg")
-      // animation: backgroundFade 3s. ease forwards
-      // background-color: #ffaaaa     
-  &--apps
-    // background-image: url(../img/home_apps.png)
-    // background-color: #f4b3ff
-    &::before
-      // background-image: url("../img/home_apps.svg")
-      // animation: backgroundFade 3s .ease forwards
-      // background-color: #ffaaaa       
+  background: radial-gradient(50% 118.32% at 50% 50%, #a0a0a0 0%, #625e5e 100%)
 
   @include respond(tablet)
     overflow-y: auto    
@@ -62,27 +35,43 @@
     @include respond(phone)
       gap: 10px
 
-  &__card
+  &__title    
+    align-self: end    
+    width: 100%
+    text-align: center
+    font-family: "Gruppo"
+    color: $color-white
+    transition: .6s font-size ease, .6s padding ease, .6s line-height ease 
+
+  &__descr
+    width: 100%    
+    box-sizing: border-box
+    align-self: start
+    text-align: center
+    color: $color-dark-green
+    transition: .6s font-size ease, .6s padding ease , .6s line-height ease        
+
+  &__card    
     display: flex
-    align-items: center
+    flex-wrap: wrap
     justify-content: center
     flex-shrink: 0
     box-sizing: border-box
     border: none    
-    box-shadow: 0 4px 38px 0 rgba(0, 0, 0, 0.22)
     border-radius: 38px
-    background-color: $color-white
+    background-color: $color-dark-gray    
+    padding: 15px
     cursor: default
     transition: .6s all ease
     @include respond(tablet)
       border-radius: 28px      
     @include respond(phone)
       border-radius: 18px
-
+  
     &--far      
       flex: 0 0 20vw
       height: clamp(18px, 16.2vw, 80vh)
-      opacity: .5
+      opacity: .1
       border-radius: 18px
       pointer-events: none
       @include respond(tablet)
@@ -92,31 +81,43 @@
     &--side      
       flex: 0 0 20.7vw
       height: clamp(28px, 26.7vw, 80vh)
-      opacity: .75
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3)
+      opacity: .7
+      will-change: opacity
       pointer-events: none
       @include respond(tablet)     
         flex-basis: 70%
         height: 55dvh
+    &--side .home__title
+      padding-bottom: 5px
+      font-size: 4rem
+    &--side .home__descr      
+      padding-top: 5px
+      font-size: 1.5rem      
 
-
-    &--active      
+    &--active            
       flex: 0 0 32.5vw
       height: clamp(38px, 41vw, 80vh)
+      box-shadow: 0 4px 38px 0 rgba(255, 255, 255, 0.5)
       opacity: 1
       cursor: pointer
       @include respond(tablet)        
         flex-basis: 80%
         height: 70dvh
+    &--active .home__title      
+      padding-bottom: 15px
+      font-size: 7rem
+    &--active .home__descr      
+      padding-top: 15px
+      font-size: 3rem
+    &:hover
+      box-shadow: 0 4px 38px 0 rgba(140, 214, 71, 0.5)
+      // box-shadow: 0 4px 38px 0 rgba(116, 141, 93, 0.5)
   
     &--empty
-      background: $color-lite-violet
+      opacity: .2
+      box-shadow: 0 4px 38px 0 rgba(0, 0, 0, .3)
     
     &--invisible
       opacity: 0
-
-@keyframes backgroundFade
-  from
-    opacity: 0
-
-  to
-    opacity: 1
+  
