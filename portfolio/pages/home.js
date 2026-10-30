@@ -27,6 +27,9 @@ function renderCards() {
         ${index === 3 && section ? `href="#${section.path}" data-link` : ""}
         data-index="${index}"
       >
+        <svg class="home__icon">
+          <use xlink:href="./portfolio/img/sprite.svg#arr"></use>
+        </svg>    
         <h1 class="home__title">${section ? section.title : ""}</h1>
         <p class="home__descr">${section ? section.description ?? "" : ""}</p>
       </a>
@@ -104,6 +107,9 @@ function moveCards(direction) {
 
   isScrolling = true;
 
+  const home = document.querySelector(".home");
+  home?.classList.add("is-scrolling");
+
   const gap = parseFloat(getComputedStyle(track).gap) || 0;
   const distance =
     cards[direction > 0 ? 0 : 6].getBoundingClientRect().width + gap;
@@ -147,6 +153,7 @@ function moveCards(direction) {
     track.getBoundingClientRect();
 
     isScrolling = false;
+    home?.classList.remove("is-scrolling");
   };
 
   track.addEventListener("transitionend", finishMove);

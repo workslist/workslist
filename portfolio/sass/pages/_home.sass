@@ -5,7 +5,7 @@
   align-items: center
   overflow: hidden
   height: calc(100dvh - 75px)
-  background: radial-gradient(50% 118.32% at 50% 50%, #a0a0a0 0%, #625e5e 100%)
+  background: $background-gray
 
   @include respond(tablet)
     overflow-y: auto    
@@ -31,11 +31,22 @@
     will-change: transform    
     padding: 10dvh 0
     @include respond(tablet)
-      gap: 15px
+      gap: 18px
     @include respond(phone)
-      gap: 10px
+      gap: 13px
+  
+  &__icon
+    grid-row: 1 / 2
+    justify-self: end
+    display: block
+    text-align: right
+    width: 25px
+    height: 25px
+    fill: $color-dark-green
+    transition: .6s fill
 
-  &__title    
+  &__title
+    grid-row: 2 / 3
     align-self: end    
     width: 100%
     text-align: center
@@ -44,6 +55,8 @@
     transition: .6s font-size ease, .6s padding ease, .6s line-height ease 
 
   &__descr
+    grid-row: 3 / 4
+    align-self: start
     width: 100%    
     box-sizing: border-box
     align-self: start
@@ -51,43 +64,52 @@
     color: $color-dark-green
     transition: .6s font-size ease, .6s padding ease , .6s line-height ease        
 
-  &__card    
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-    flex-shrink: 0
+  &__card
+    display: grid
+    grid-template-rows: 25px 1fr 1fr 25px
     box-sizing: border-box
     border: none    
     border-radius: 38px
     background-color: $color-dark-gray    
-    padding: 15px
+    padding: 3rem
+
+    background-image: url(../img/line.svg)
+    background-repeat: no-repeat
+    background-position: left 3rem bottom 3rem
+
     cursor: default
     transition: .6s all ease
     @include respond(tablet)
       border-radius: 28px      
     @include respond(phone)
-      border-radius: 18px
+      border-radius: 18px      
   
-    &--far      
+    &--far
       flex: 0 0 20vw
       height: clamp(18px, 16.2vw, 80vh)
       opacity: .1
       border-radius: 18px
       pointer-events: none
+      svg
+        display: none
       @include respond(tablet)
         border-radius: 8px
         flex-basis: 30dvh
+      @include respond(phone)
+        height: 20dvh
 
     &--side      
       flex: 0 0 20.7vw
       height: clamp(28px, 26.7vw, 80vh)
-      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3)
+      box-shadow: $shadow-gray
       opacity: .7
       will-change: opacity
       pointer-events: none
       @include respond(tablet)     
         flex-basis: 70%
         height: 55dvh
+      @include respond(phone)
+        height: 45dvh
     &--side .home__title
       padding-bottom: 5px
       font-size: 4rem
@@ -98,26 +120,41 @@
     &--active            
       flex: 0 0 32.5vw
       height: clamp(38px, 41vw, 80vh)
-      box-shadow: 0 4px 38px 0 rgba(255, 255, 255, 0.5)
+      box-shadow: $shadow-white
       opacity: 1
       cursor: pointer
       @include respond(tablet)        
         flex-basis: 80%
         height: 70dvh
+      @include respond(phone)
+        height: 60dvh
+        box-shadow: $shadow-lite-white
     &--active .home__title      
       padding-bottom: 15px
       font-size: 7rem
     &--active .home__descr      
       padding-top: 15px
       font-size: 3rem
-    &:hover
-      box-shadow: 0 4px 38px 0 rgba(140, 214, 71, 0.5)
-      // box-shadow: 0 4px 38px 0 rgba(116, 141, 93, 0.5)
   
     &--empty
       opacity: .2
-      box-shadow: 0 4px 38px 0 rgba(0, 0, 0, .3)
+      box-shadow: $shadow-lite-gray
+      svg
+        display: none
+      @include respond(tablet)
+        border-radius: 8px
+        flex-basis: 30dvh
+      @include respond(phone)
+        height: 20dvh
     
     &--invisible
       opacity: 0
-  
+
+.home:not(.is-scrolling) .home__card--active:hover
+  box-shadow: 0 4px 38px 0 $color-green
+  svg
+    fill: $color-green
+.home:not(.is-scrolling) .home__card--active:active
+  box-shadow: 0 4px 38px 0 $color-lite-green
+  svg
+    fill: $color-lite-green

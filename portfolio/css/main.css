@@ -65,6 +65,21 @@ img {
 html {
   font-size: 62.5%;
 }
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 92.5%;
+  }
+}
+@media only screen and (max-width: 1240px) {
+  html {
+    font-size: 52.5%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 42.5%;
+  }
+}
 
 a {
   display: inline-block;
@@ -390,17 +405,28 @@ iframe {
 }
 @media only screen and (max-width: 900px) {
   .home__track {
-    gap: 15px;
+    gap: 18px;
   }
 }
 @media only screen and (max-width: 600px) {
   .home__track {
-    gap: 10px;
+    gap: 13px;
   }
 }
+.home__icon {
+  grid-row: 1/2;
+  justify-self: end;
+  display: block;
+  text-align: right;
+  width: 25px;
+  height: 25px;
+  fill: #748D5D;
+  -webkit-transition: 0.6s fill;
+  transition: 0.6s fill;
+}
 .home__title {
-  -ms-flex-item-align: end;
-      align-self: end;
+  grid-row: 2/3;
+  align-self: end;
   width: 100%;
   text-align: center;
   font-family: "Gruppo";
@@ -409,33 +435,29 @@ iframe {
   transition: 0.6s font-size ease, 0.6s padding ease, 0.6s line-height ease;
 }
 .home__descr {
+  grid-row: 3/4;
+  align-self: start;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -ms-flex-item-align: start;
-      align-self: start;
+  align-self: start;
   text-align: center;
   color: #748D5D;
   -webkit-transition: 0.6s font-size ease, 0.6s padding ease, 0.6s line-height ease;
   transition: 0.6s font-size ease, 0.6s padding ease, 0.6s line-height ease;
 }
 .home__card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  display: grid;
+  grid-template-rows: 25px 1fr 1fr 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: none;
   border-radius: 38px;
   background-color: #3F3F3F;
-  padding: 15px;
+  padding: 3rem;
+  background-image: url(../img/line.svg);
+  background-repeat: no-repeat;
+  background-position: left 3rem bottom 3rem;
   cursor: default;
   -webkit-transition: 0.6s all ease;
   transition: 0.6s all ease;
@@ -459,11 +481,19 @@ iframe {
   border-radius: 18px;
   pointer-events: none;
 }
+.home__card--far svg {
+  display: none;
+}
 @media only screen and (max-width: 900px) {
   .home__card--far {
     border-radius: 8px;
     -ms-flex-preferred-size: 30dvh;
         flex-basis: 30dvh;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .home__card--far {
+    height: 20dvh;
   }
 }
 .home__card--side {
@@ -482,6 +512,11 @@ iframe {
     -ms-flex-preferred-size: 70%;
         flex-basis: 70%;
     height: 55dvh;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .home__card--side {
+    height: 45dvh;
   }
 }
 .home__card--side .home__title {
@@ -509,6 +544,13 @@ iframe {
     height: 70dvh;
   }
 }
+@media only screen and (max-width: 600px) {
+  .home__card--active {
+    height: 60dvh;
+    -webkit-box-shadow: 0 4px 15px 0 rgba(255, 255, 255, 0.4);
+            box-shadow: 0 4px 15px 0 rgba(255, 255, 255, 0.4);
+  }
+}
 .home__card--active .home__title {
   padding-bottom: 15px;
   font-size: 7rem;
@@ -517,17 +559,44 @@ iframe {
   padding-top: 15px;
   font-size: 3rem;
 }
-.home__card:hover {
-  -webkit-box-shadow: 0 4px 38px 0 rgba(140, 214, 71, 0.5);
-          box-shadow: 0 4px 38px 0 rgba(140, 214, 71, 0.5);
-}
 .home__card--empty {
   opacity: 0.2;
   -webkit-box-shadow: 0 4px 38px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 0 4px 38px 0 rgba(0, 0, 0, 0.3);
 }
+.home__card--empty svg {
+  display: none;
+}
+@media only screen and (max-width: 900px) {
+  .home__card--empty {
+    border-radius: 8px;
+    -ms-flex-preferred-size: 30dvh;
+        flex-basis: 30dvh;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .home__card--empty {
+    height: 20dvh;
+  }
+}
 .home__card--invisible {
   opacity: 0;
+}
+
+.home:not(.is-scrolling) .home__card--active:hover {
+  -webkit-box-shadow: 0 4px 38px 0 rgba(140, 214, 71, 0.8);
+          box-shadow: 0 4px 38px 0 rgba(140, 214, 71, 0.8);
+}
+.home:not(.is-scrolling) .home__card--active:hover svg {
+  fill: rgba(140, 214, 71, 0.8);
+}
+
+.home:not(.is-scrolling) .home__card--active:active {
+  -webkit-box-shadow: 0 4px 38px 0 rgba(140, 214, 71, 0.6);
+          box-shadow: 0 4px 38px 0 rgba(140, 214, 71, 0.6);
+}
+.home:not(.is-scrolling) .home__card--active:active svg {
+  fill: rgba(140, 214, 71, 0.6);
 }
 
 .project {

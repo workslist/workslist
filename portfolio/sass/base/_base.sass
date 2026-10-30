@@ -26,6 +26,12 @@ img
 
 html
   font-size: 62.5%
+  @include respond(desktop)
+    font-size: 92.5%
+  @include respond(laptop)
+    font-size: 52.5%
+  @include respond(phone)
+    font-size: 42.5%
   
 
 a  

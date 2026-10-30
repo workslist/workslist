@@ -40,7 +40,10 @@
 
   <section class="home">
 
-   <a class="home__card">
+   <a class="home__card">    
+     <svg class="home__icon">
+      <use xlink:href="img/sprite.svg#arr"></use>
+     </svg>         
     <h1 class="home__content home__title">${section ? section.title : ""}</h1>
     <p class="home__content home__description">${section ? section.description ?? "" : ""}</p>
    </a>
