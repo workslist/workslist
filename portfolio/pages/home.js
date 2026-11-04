@@ -23,15 +23,18 @@ function renderCards() {
 
     return `
       <a
-        class="home__card ${getCardClass(index)} ${isContentCard ? "" : "home__card--empty"} ${index === 0 || index === 6 ? "home__card--invisible" : ""}"
+        class="home__card ${getCardClass(index)} ${index === 0 || index === 6 ? "home__card--invisible" : ""}"
         ${index === 3 && section ? `href="#${section.path}" data-link` : ""}
         data-index="${index}"
       >
-        <svg class="home__icon">
+        <svg class="home__arr">
           <use xlink:href="./portfolio/img/sprite.svg#arr"></use>
         </svg>    
         <h1 class="home__title">${section ? section.title : ""}</h1>
         <p class="home__descr">${section ? section.description ?? "" : ""}</p>
+        <svg class="home__icon">
+          <use xlink:href="./portfolio/img/sprite.svg#card_img"></use>
+        </svg>    
       </a>
     `;
   }).join("");
@@ -51,7 +54,7 @@ export function renderHome() {
 
 function updateCards(cards, nextActiveIndex) {
   cards.forEach((card, index) => {
-    const isContentCard = index >= 2 && index <= 4;
+    const isContentCard = index >= 1 && index <= 5;
     const section = isContentCard
       ? sections[getIndex(nextActiveIndex + index - 3)]
       : null;
@@ -80,15 +83,10 @@ function updateCards(cards, nextActiveIndex) {
       "home__card--far",
       "home__card--side",
       "home__card--active",
-      "home__card--empty",
       "home__card--invisible"
     );
 
     card.classList.add(getCardClass(index));
-
-    if (!isContentCard) {
-      card.classList.add("home__card--empty");
-    }
 
     if (index === 0 || index === 6) {
       card.classList.add("home__card--invisible");
@@ -126,7 +124,7 @@ function moveCards(direction) {
   track.style.transform = "translateX(-50%)";
   track.getBoundingClientRect();
 
-  track.style.transition = "transform 0.3s ease";
+  track.style.transition = "transform 0.4s ease-in-out";
   track.style.transform =
     `translateX(calc(-50% ${direction > 0 ? " - " : " + "}${distance}px))`;
 

@@ -4,7 +4,7 @@ export const sections = [
   {
     title: "Landings",
     path: "/landings",        
-    description : "hfhd fdsss ssddffs"
+    description : "hfhd fdsss"
   },
   {
     title: "Emails",

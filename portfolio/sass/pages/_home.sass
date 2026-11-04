@@ -1,14 +1,13 @@
 /* home */  
 
 .home
-  display: flex
-  align-items: center
+  display: flex  
   overflow: hidden
-  height: calc(100dvh - 75px)
+  height: calc(100dvh - 75px)  
   background: $background-gray
 
   @include respond(tablet)
-    overflow-y: auto    
+    overflow-y: auto  
 
   &__cards
     width: 100%
@@ -18,6 +17,8 @@
     @include respond(tablet)
       overflow-y: auto
       height: auto
+      min-height: fit-content
+
   
   &__track
     display: flex
@@ -27,58 +28,60 @@
     width: 100%    
     position: relative
     left: 50%
-    transform: translateX(-50%)            
-    will-change: transform    
-    padding: 10dvh 0
+    transform: translateX(-50%)     
+    will-change: transform
+    padding: 10dvh 0    
+
     @include respond(tablet)
       gap: 18px
     @include respond(phone)
       gap: 13px
   
-  &__icon
+  &__arr
     grid-row: 1 / 2
-    justify-self: end
-    display: block
-    text-align: right
+    justify-self: end    
     width: 25px
     height: 25px
     fill: $color-dark-green
-    transition: .6s fill
+    transition: .4s all
+  
+  &__icon
+    grid-row: 4 / 5
+    justify-self: start        
+    align-self: end
+    width: 8.5rem
+    height: 7rem
+    transition: .4s all
 
   &__title
     grid-row: 2 / 3
-    align-self: end    
+    align-self: end
     width: 100%
     text-align: center
     font-family: "Gruppo"
     color: $color-white
-    transition: .6s font-size ease, .6s padding ease, .6s line-height ease 
+    transition: .4s font-size ease-in-out, .4s line-height ease-in-out, .4s ease-in-out opacity
 
   &__descr
     grid-row: 3 / 4
     align-self: start
-    width: 100%    
+    width: 100%
     box-sizing: border-box
     align-self: start
     text-align: center
     color: $color-dark-green
-    transition: .6s font-size ease, .6s padding ease , .6s line-height ease        
+    transition: .4s font-size ease-in-out , .4s line-height ease-in-out, .4s ease-in-out opacity      
 
   &__card
     display: grid
-    grid-template-rows: 25px 1fr 1fr 25px
-    box-sizing: border-box
-    border: none    
-    border-radius: 38px
+    grid-template-rows: 7rem 1fr 1fr 7rem
+    min-height: fit-content  
+    border: none        
     background-color: $color-dark-gray    
     padding: 3rem
 
-    background-image: url(../img/line.svg)
-    background-repeat: no-repeat
-    background-position: left 3rem bottom 3rem
-
     cursor: default
-    transition: .6s all ease
+    transition: .4s all ease-in-out
     @include respond(tablet)
       border-radius: 28px      
     @include respond(phone)
@@ -88,39 +91,49 @@
       flex: 0 0 20vw
       height: clamp(18px, 16.2vw, 80vh)
       opacity: .1
-      border-radius: 18px
+      border-radius: 1.8rem
       pointer-events: none
       svg
-        display: none
+        opacity: 0
       @include respond(tablet)
         border-radius: 8px
         flex-basis: 30dvh
       @include respond(phone)
         height: 20dvh
+    &--far .home__title
+      opacity: 0
+    &--far .home__descr      
+      opacity: 0
 
     &--side      
       flex: 0 0 20.7vw
       height: clamp(28px, 26.7vw, 80vh)
       box-shadow: $shadow-gray
+      border-radius: 2.8rem
       opacity: .7
       will-change: opacity
       pointer-events: none
+      padding: 2rem
       @include respond(tablet)     
         flex-basis: 70%
         height: 55dvh
       @include respond(phone)
         height: 45dvh
-    &--side .home__title
-      padding-bottom: 5px
+    &--side .home__title      
       font-size: 4rem
-    &--side .home__descr      
-      padding-top: 5px
-      font-size: 1.5rem      
+      line-height: 6rem
+    &--side .home__descr            
+      font-size: 1.5rem
+    &--side .home__arr
+      transform: scale(.7)
+    &--side .home__icon
+      transform: scale(.7)
 
     &--active            
       flex: 0 0 32.5vw
       height: clamp(38px, 41vw, 80vh)
       box-shadow: $shadow-white
+      border-radius: 3.8rem
       opacity: 1
       cursor: pointer
       @include respond(tablet)        
@@ -130,22 +143,10 @@
         height: 60dvh
         box-shadow: $shadow-lite-white
     &--active .home__title      
-      padding-bottom: 15px
       font-size: 7rem
-    &--active .home__descr      
-      padding-top: 15px
+      line-height: 10rem
+    &--active .home__descr            
       font-size: 3rem
-  
-    &--empty
-      opacity: .2
-      box-shadow: $shadow-lite-gray
-      svg
-        display: none
-      @include respond(tablet)
-        border-radius: 8px
-        flex-basis: 30dvh
-      @include respond(phone)
-        height: 20dvh
     
     &--invisible
       opacity: 0
