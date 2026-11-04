@@ -1,0 +1,89 @@
+/* landings */
+
+.landings
+  background: $background-gray
+  height: calc(100dvh - 75px)  
+  overflow: auto
+
+  &__cards
+    width: 100%
+    max-width: 1650px
+    margin: 0 auto
+    padding: 50px
+    display: flex
+    flex-wrap: wrap
+    gap: 50px
+    @include respond(laptop)
+      gap: 30px
+      padding: 30px
+    @include respond(phone)
+      gap: 15px
+      padding: 15px
+
+  &__card
+    display: flex
+    flex-direction: column
+    flex: 1 1 500px
+    padding: 40px 40px 12px
+    border-radius: 38px
+    background-color: $color-dark-gray
+    box-shadow: $shadow-gray
+    transition: .4s all ease-in-out
+    @include respond(laptop)
+      flex-basis: 400px
+      border-radius: 28px
+      padding: 30px 30px 12px
+    @include respond(tablet)
+      flex-basis: 265px
+      padding: 20px 20px 12px
+    @include respond(phone)
+      flex-basis: 100%
+    &:hover
+      box-shadow: $shadow-white
+    &:active
+      box-shadow: $shadow-lite-white
+
+  &__subject
+    font-size: 80px        
+    color: $color-white
+    padding-bottom: 28px
+    @include respond(laptop)
+      font-size: 60px
+    @include respond(tablet)
+      font-size: 50px
+  
+  &__descr
+    font-size: 40px        
+    color: $color-lite-green
+    padding-bottom: 65px
+    @include respond(laptop)
+      font-size: 25px
+      padding-bottom: 45px
+    @include respond(tablet)
+      font-size: 20px
+      padding-bottom: 35px
+
+  &__text
+    font-size: 20px        
+    color: $color-lite-green
+    text-align: right
+    @include respond(laptop)
+      font-size: 15px 
+    @include respond(tablet)
+      font-size: 12px
+  
+  &__img
+    width: 100%
+    height: 400px
+    object-fit: cover
+    object-position: top left
+    border-radius: 28px
+    margin-top: auto
+    margin-bottom: 10px
+    @include respond(laptop)
+      border-radius: 20px
+      height: 300px
+    @include respond(tablet)
+      height: 250px
+    
+
