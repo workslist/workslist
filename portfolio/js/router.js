@@ -50,16 +50,43 @@ export function goBack() {
 function updateHeader(path) {
   const backButton = document.querySelector("[data-back]");
   const sectionButton = document.querySelector("[data-section-button]");
+  const actionButton = document.querySelector(".header__all");
+
+  const isProject = path.startsWith("/project/");
+  const project = projects[path];
 
   if (backButton) {
     backButton.classList.toggle("display-hidden", path === "/");
   }
 
-  if (sectionButton) {
-    const isProject = path.startsWith("/project/");
-    sectionButton.classList.toggle("display-hidden", !isProject);
-  }  
+  if (!actionButton) return;
 
+  const label = actionButton.querySelector("span");
+
+  if (isProject && project?.git) {
+    // Показываем Git
+    actionButton.href = project.git;
+    actionButton.target = "_blank";
+    actionButton.rel = "noopener noreferrer";
+
+    actionButton.removeAttribute("data-section-button");
+
+    if (label) label.textContent = "Git";
+
+    actionButton.classList.remove("display-hidden");
+
+  } else {
+    // Возвращаем All
+    actionButton.href = "#";
+    actionButton.removeAttribute("target");
+    actionButton.removeAttribute("rel");
+
+    actionButton.setAttribute("data-section-button", "");
+
+    if (label) label.textContent = "All";
+
+    actionButton.classList.toggle("display-hidden", !isProject || !project?.git);
+  }
 }
 
 const app = document.querySelector("#app");

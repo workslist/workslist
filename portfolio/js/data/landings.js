@@ -29,7 +29,7 @@ export const landings = {
     description: "",
     image: "./Layout/sass/flex/evklid/preview.png",
     path: "./Layout/sass/flex/evklid/index.html",
-    git: "",
+    git: "https://github.com/workslist/workslist/tree/bba0ba23077d0e897c2b4e5fcee107aa50eb4ac8/Layout/sass/flex/evklid",
     section: "/landings"
   },
 
