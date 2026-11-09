@@ -64,8 +64,8 @@ function updateCards(cards, nextActiveIndex) {
     const content = card.querySelector(".home__content");
 
     // Обновляем текст, не удаляя HTML-элементы
-    title.textContent = section ? section.title : "";
-    description.textContent = section ? section.description ?? "" : "";
+    title.innerHTML = section ? section.title : "";
+    description.innerHTML = section ? section.description ?? "" : "";
 
     card.dataset.index = index;
 
