@@ -9,17 +9,26 @@ import { projects } from "./data/projects.js";
 
 const navigationHistory = [];
 let currentSection = "/";
+const sectionScrollPositions = {};
 
 const routes = {
   "/": renderHome,
   "/landings": renderLandings,
-  "/email": renderEmail
+  "/emails": renderEmail
 }
 
 export function navigate(path, option = {}) {
   const currentPath = location.hash.slice(1) || "/";
 
   if (currentPath === path) return;
+
+  if (projects[path] && routes[currentPath]) {
+    const section = document.querySelector(".landings, .email");
+
+    if (section) {
+      sectionScrollPositions[currentPath] = section.scrollTop;
+    }
+  }
 
   navigationHistory.push(currentPath);
 
@@ -105,6 +114,16 @@ export function renderRoute() {
 
   updateHeader(path);
   app.innerHTML = render();
+
+  if (routes[path] && path !== "/") {
+    requestAnimationFrame(() => {
+      const section = document.querySelector(".landings, .email");
+
+      if (section) {
+        section.scrollTop = sectionScrollPositions[path] ?? 0;
+      }
+    });
+  }
 }
 
 document.addEventListener("click", event => {

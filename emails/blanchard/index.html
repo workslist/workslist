@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Blanchard</title>
+
+ <style type="text/css">
+  @import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ </style>
+
+ <style type="text/css">
+  html {
+   -webkit-text-size-adjust: none;
+   -ms-text-size-adjust: none;
+  }
+ </style>
+
+ <style type="text/css">
+  .button {
+   color: #FFFFFF !important;
+   box-shadow: 0 2px 10px 0 rgba(255, 255, 255, 0.2);
+   transition: .3s color ease-in-out !important;
+  }
+
+  .button:hover {
+   color: rgba(140, 214, 71, 0.6) !important;
+  }
+
+  .button:not(hover) {
+   color: #FFFFFF !important;
+   transition: .3s color ease-in-out !important;
+  }
+
+  .button.active {
+   color: rgba(140, 214, 71, 0.8) !important;
+  }
+
+  .button:not(active) {
+   color: #FFFFFF !important;
+   transition: .3s color ease-in-out !important;
+  }
+
+  .preview {
+   display: none !important;
+  }
+
+  .preview.active {
+   display: block !important;
+  }
+ </style>
+
+ <style type="text/css">
+  @media only screen and (max-device-width: 600px),
+  only screen and (max-width: 600px) {
+   .button {
+    font-size: 28px !important;
+    line-height: 28px !important;
+   }
+
+   .max_width_277 {
+    max-width: 277px !important;
+   }
+
+   .max_width_325 {
+    max-width: 325px !important;
+   }
+
+   .max_width_602 {
+    max-width: 602px !important;
+   }
+
+  }
+ </style>
+
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+   const buttons = document.querySelectorAll('.button');
+   const images = document.querySelectorAll('.preview');
+
+   buttons.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+     const name = [...button.classList]
+      .find(className => className !== 'button');
+
+     buttons.forEach(item => item.classList.remove('active'));
+     images.forEach(item => item.classList.remove('active'));
+
+     button.classList.add('active');
+     document.querySelector(`.preview.${name}`).classList.add('active');
+
+    });
+
+   });
+
+   buttons[0].click();
+
+  });
+ </script>
+
+</head>
+
+<body style="padding:0px; margin:0px;">
+
+ <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+   <td align="center" style="background: radial-gradient(50% 118.32% at 50% 50%, #a0a0a0 0%, #625e5e 100%);">
+    <table border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100%; max-width: 900px; min-width: 350px;">
+
+     <tr>
+      <td align="center">
+       <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+         <td align="center" style="padding: 20px 8px;">
+          <table class="max_width_602" border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100%; max-width: 647px;">
+           <tr>
+            <td align="center" valign="middle" style="font-size: 0px; line-height: 0px;">
+             <div class="max_width_277" style="display: inline-block; vertical-align: middle; width: 100%; max-width: 300px;">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+               <tr>
+                <td align="center" style="padding: 8px;">
+                 <table border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                   <td class="button desktop" align="center" valign="top" bgcolor="#3F3F3F" style="background-color: #3F3F3F; border-radius: 12px; overflow: hidden; font-family: 'Poiret One', Arial, Helvetica, sans-serif; font-size: 32px; line-height: 32px; padding: 10px 20px; cursor: pointer;">
+                    desktop
+                   </td>
+                  </tr>
+                 </table>
+                </td>
+                <td align="center" style="padding: 8px;">
+                 <table border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                   <td class="button mobile" align="center" valign="top" bgcolor="#3F3F3F" style="background-color: #3F3F3F; border-radius: 12px; overflow: hidden; font-family: 'Poiret One', Arial, Helvetica, sans-serif; font-size: 32px; line-height: 32px; padding: 10px 20px; cursor: pointer;">
+                    mobile
+                   </td>
+                  </tr>
+                 </table>
+                </td>
+               </tr>
+              </table>
+             </div>
+             <div class="max_width_325" style="display: inline-block; vertical-align: middle; width: 100%; max-width: 347px;">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+               <tr>
+                <td align="center" style="padding: 8px;">
+                 <table border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                   <td class="button dark_mode" align="center" valign="top" bgcolor="#3F3F3F" style="background-color: #3F3F3F; border-radius: 12px; overflow: hidden; font-family: 'Poiret One', Arial, Helvetica, sans-serif; font-size: 32px; line-height: 32px; padding: 10px 20px; cursor: pointer;">
+                    dark&nbsp;mode
+                   </td>
+                  </tr>
+                 </table>
+                </td>
+                <td align="center" style="padding: 8px;">
+                 <table border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                   <td class="button outlook" align="center" valign="top" bgcolor="#3F3F3F" style="background-color: #3F3F3F; border-radius: 12px; overflow: hidden; font-family: 'Poiret One', Arial, Helvetica, sans-serif; font-size: 32px; line-height: 32px; padding: 10px 20px; cursor: pointer;">
+                    outlook
+                   </td>
+                  </tr>
+                 </table>
+                </td>
+               </tr>
+              </table>
+             </div>
+            </td>
+           </tr>
+          </table>
+         </td>
+        </tr>
+       </table>
+      </td>
+     </tr>
+
+     <tr>
+      <td align="center">
+       <img class="preview desktop" src="img/desktop.png" width="800" style="display: block; width: 100%; max-width: 800px; border-radius: 10px; overflow: hidden;" alt="" border="0">
+       <img class="preview mobile" src="img/mobile.png" width="320" style="display: block; width: 100%; max-width: 320px; border-radius: 10px; overflow: hidden;" alt="" border="0">
+       <img class="preview dark_mode" src="img/dark_mode.png" width="320" style="display: block; width: 100%; max-width: 320px; border-radius: 10px; overflow: hidden;" alt="" border="0">
+       <img class="preview outlook" src="img/outlook.png" width="800" style="display: block; width: 100%; max-width: 800px; border-radius: 10px; overflow: hidden;" alt="" border="0">
+      </td>
+     </tr>
+
+    </table>
+   </td>
+  </tr>
+ </table>
+
+</body>
+
+</html>

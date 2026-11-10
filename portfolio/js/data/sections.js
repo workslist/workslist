@@ -4,12 +4,12 @@ export const sections = [
   {
     title: "Landings",
     path: "/landings",        
-    description : "HTML5 CSS3 SCSS BEM Responsive&nbsp;Design"
+    description : "HTML5 CSS3 SCSS BEM Responsive&nbsp;design"
   },
   {
     title: "Emails",
     path: "/emails",        
-    description : "hfhdfdhjdjdj"
+    description : "Table&#8209;based Inline&nbsp;CSS Responsive&nbsp;design Dark&nbsp;mode Outlook"
   },
   {
     title: "Apps",
