@@ -4,6 +4,7 @@ import { renderHeader } from "./header.js";
 import { renderHome } from "../pages/home.js";
 import { renderLandings } from "../pages/landings.js";
 import { renderEmail } from "../pages/email.js";
+import { renderApps } from "../pages/apps.js";
 import { renderProject } from "../pages/project.js";
 import { projects } from "./data/projects.js";
 
@@ -14,7 +15,8 @@ const sectionScrollPositions = {};
 const routes = {
   "/": renderHome,
   "/landings": renderLandings,
-  "/emails": renderEmail
+  "/emails": renderEmail,
+  "/apps": renderApps
 }
 
 export function navigate(path, option = {}) {
