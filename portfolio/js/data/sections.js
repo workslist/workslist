@@ -14,6 +14,6 @@ export const sections = [
   {
     title: "Apps",
     path: "/apps",        
-    description : "hfhdfdhjdjdj"
+    description : "JavaScript DOM Event&nbsp;Handling Testing Demo&nbsp;Mode"
   },
 ]
