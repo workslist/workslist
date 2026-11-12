@@ -1,0 +1,18 @@
+@use '_common.scss';
+@use '_mixins.scss';
+
+.banks {
+
+  display: flex;
+  padding: 0 20px 20px 20px;
+  @include mixins.font-second;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 34px;
+    font-weight: 700;
+  }
+}

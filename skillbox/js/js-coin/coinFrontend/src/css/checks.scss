@@ -1,0 +1,183 @@
+@use '_common.scss';
+@use '_mixins.scss';
+
+.checsk {
+
+  @include mixins.font-second;
+
+  &__boxPanel {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+
+  &__boxSort {
+    display: flex;
+    padding-top: 9px;
+    gap: 45px;
+  }
+
+  &__title {
+    font-size: 34px;
+    font-weight: 700;
+  }
+
+  &__sortList {
+    position: relative;
+    padding: 8px 16px;
+    width: 265px;
+    height: 24px;
+    border: 1px solid #116acc;
+    border-radius: 7px;
+  }
+
+  &__sortSubject {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &__sortImg {
+    position: absolute;
+    width: 10px;
+    height: 5px;
+    right: 23px;
+    top: 17px;
+
+    &-none {
+      display: none;
+    }
+  }
+
+  &__sortListAfter {
+    position: absolute;
+    @include mixins.clearListStyles;
+    display: flex;
+    flex-direction: column;
+    width: 296px;
+    left: 0;
+    gap: 10px;
+    padding: 10px 0;
+    top: 42px;
+    border-radius: 7px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
+    z-index: 1;
+  }
+
+  &__sortItem {
+    position: relative;
+    padding: 8px 16px;
+  }
+
+  &__sortItem:hover {
+    background: #A0C3FF;
+    cursor: pointer;
+  }
+
+  &__sortItemImg {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 24px;
+    right: 15px;
+    bottom: 6px;
+
+    &-none {
+      display: none;
+    }
+  }
+
+  &__boxPanelBtn {
+    padding: 13px 24px 13px 60px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: #fff;
+    border-radius: 7px;
+    background: #116ACC;
+    background-image: url('../img/plus.svg');
+    background-repeat: no-repeat;
+    background-position: 24px 10px;
+  }
+
+  // Список счетов
+
+  &__boxList {
+    padding: 20px
+  }
+
+  &__list {
+    @include mixins.clearListStyles;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__item {
+    padding: 22px;
+    width: 350px;
+    border-radius: 9px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
+  }
+
+  &__itemBox {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &__itemContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+  }
+
+  &__check {
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 122%;
+    letter-spacing: -0.01em;
+    color: #182233;
+  }
+
+  &__balance {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: #182233;
+  }
+
+  &__transactionBox {
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: -0.02em;
+    color: #000;
+  }
+
+  &__transactionValue {
+    font-weight: 400;
+  }
+
+  &__btn {
+    position: absolute;
+    border-radius: 7px;
+    padding: 16px 24px;
+    right: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: #fff;
+    background: #116acc;
+    height: fit-content;
+  }
+
+
+}

@@ -1,0 +1,9 @@
+@use '_fonts.scss';
+@use '_mixins.scss';
+
+.main {
+  position: relative;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 30px;
+}

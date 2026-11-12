@@ -1,0 +1,103 @@
+:root {
+  font-family: sans-serif;;
+}
+
+body {
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+
+.title {
+  margin: 0;
+}
+
+.goods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+.goods__item {
+  width: 21%;
+  border: 1px solid #cbcbcb;
+  border-radius: 15px;
+  box-shadow: 0px 5px 40px 0px rgb(0 0 0 / 20%);
+}
+
+.box {
+}
+
+.goods__box {
+  padding: 16px;
+}
+
+.goods__img {
+  width: 100%;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+}
+
+.goods__price {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 7px;
+  gap: 8px;
+}
+
+.goods__wrap {
+
+}
+
+.goods__wrap-discount {
+  color: #27C95C;
+}
+
+.goods__full {
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.goods__full:not(:last-child) {
+  margin-right: 4px;
+}
+
+.goods__full-symbol {
+  font-size: 14px;
+}
+
+.goods__discount {
+  text-decoration: line-through;
+  font-size: 12px;
+  font-weight: 600;
+  color: #a3a3a3;
+}
+
+.goods__discount:not(:last-child) {
+  margin-right: 3px;
+}
+
+.goods__discount-symbol {
+  font-size: 10px;
+}
+
+.discount-display {
+  display: inline-block;
+}
+
+.goods__title {
+  font-size: 13px;
+  line-height: 18px;
+  color: #000;
+}
