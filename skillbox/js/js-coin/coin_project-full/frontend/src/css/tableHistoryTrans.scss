@@ -1,0 +1,91 @@
+@use '_common.scss';
+@use '_mixins.scss';
+
+.boxTable {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 50px;
+  border-radius: 56px;
+  background: #F3F4F6;
+
+  &__subject {
+    font-weight: 700;
+    font-size: 20px;
+    color: #000;
+  }
+
+  &__table {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__thead {
+    display: flex;
+    padding: 20px 40px;
+    border-radius: 15px;
+    background: #116acc;
+  }
+
+  &__line {
+    display: flex;
+
+    &-theadTr {
+      gap: 40px;
+    }
+
+    &-tr {
+      padding-bottom: 20px;
+      border-bottom: 2px solid #dbe4f7;
+    }
+  }
+
+  &__cell {
+
+    width: 290px;
+
+    &-th {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 120%;
+      color: #fff;
+    }
+
+    &-td {
+      padding-left: 40px;
+    }
+  }
+
+  &__cell:nth-child(3n) {
+    width: 100px;
+  }
+
+  &__tbody {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  // Кнопки вперёд назад
+
+  &__boxBtn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__button {
+    margin-bottom: 20px;
+    padding: 13px 24px;
+    width: 100px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: #fff;
+    border-radius: 7px;
+    background: #116ACC;
+  }
+
+  
+}
