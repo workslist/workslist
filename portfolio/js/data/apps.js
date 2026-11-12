@@ -4,8 +4,8 @@ export const apps = {
   "/project/coin": {
     title: "Сoin",
     description: "",
-    image: "./apps/coin/preview.jpg",
-    path: "./apps/coin/index.html",
+    image: "./apps/coin/release/preview.jpg",
+    path: "./apps/coin/release/index.html",
     git: "",
     section: "/apps"
   },
