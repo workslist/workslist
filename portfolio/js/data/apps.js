@@ -14,7 +14,7 @@ export const apps = {
     description: "JS FE BE CRUD&nbsp;Operations Data&nbsp;Management Sorting",
     image: "./apps/crm/release/preview.png",
     path: "./apps/crm/release/index.html",
-    git: "",
+    git: "https://github.com/workslist/workslist/tree/ae159f87414804c01fdc39ed0ea7879192e7f494/apps/crm/app-full",
     section: "/apps"
   },
   "/project/game-of-pairs": {
