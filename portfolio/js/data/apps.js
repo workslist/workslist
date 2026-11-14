@@ -10,7 +10,7 @@ export const apps = {
     section: "/apps"
   },
   "/project/crm": {
-    title: "Crm",
+    title: "CRM",
     description: "JS FE BE CRUD&nbsp;Operations Data&nbsp;Management Sorting",
     image: "./apps/crm/release/preview.png",
     path: "./apps/crm/release/index.html",
@@ -19,10 +19,18 @@ export const apps = {
   },
   "/project/game-of-pairs": {
     title: "Game of pairs",
-    description: "JS F&B DOM&nbsp;Event Handling Game&nbsp;Logic Cypress",
+    description: "JS DOM&nbsp;Event Handling Game&nbsp;Logic Cypress",
     image: "./apps/game-of-pairs/preview.png",
     path: "./apps/game-of-pairs/index.html",
     git: "https://github.com/workslist/workslist/tree/e7880fd0707b57e211795e1d8dbfad426e530bbf/apps/game-of-pairs",
     section: "/apps"
   },
+  "/project/todo": {
+    title: "TODO",
+    description: "JS FE BE DOM CRUD&nbsp;Operations Local&nbsp;Storage",
+    image: "./apps/todo/release/preview.png",
+    path: "./apps/todo/release/index.html",
+    git: "",
+    section: "/apps"
+  }
 }
