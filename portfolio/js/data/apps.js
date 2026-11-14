@@ -30,7 +30,7 @@ export const apps = {
     description: "JS FE BE DOM CRUD&nbsp;Operations Local&nbsp;Storage",
     image: "./apps/todo/release/preview.png",
     path: "./apps/todo/release/index.html",
-    git: "",
+    git: "https://github.com/workslist/workslist/tree/7ac3e050f3f5e69b02318cbc2e742f8f5fd847e3/apps/todo/app-full",
     section: "/apps"
   }
 }
