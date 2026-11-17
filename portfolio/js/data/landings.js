@@ -58,7 +58,7 @@ export const landings = {
     description: "GreenSock Animation Platform",
     image: "./Layout/greensock/preview.png",
     path: "./Layout/greensock/index.html",
-    git: "",
+    git: "https://github.com/workslist/workslist/tree/71183ad9a27bcb0218ffbb5fc5674aac4204968d/Layout/greensock",
     section: "/landings"
   },
   
@@ -67,7 +67,7 @@ export const landings = {
     description: "Table&#8209;Based Layout",
     image: "./Layout/ticket-prices/preview.png",
     path: "./Layout/ticket-prices/index.html",
-    git: "",
+    git: "https://github.com/workslist/workslist/tree/71183ad9a27bcb0218ffbb5fc5674aac4204968d/Layout/ticket-prices",
     section: "/landings"
   },
   
