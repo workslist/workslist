@@ -25,6 +25,14 @@ export const apps = {
     git: "https://github.com/workslist/workslist/tree/e7880fd0707b57e211795e1d8dbfad426e530bbf/apps/game-of-pairs",
     section: "/apps"
   },
+  "/project/payment": {
+    title: "Форма оплаты",
+    description: "JS Form&nbsp;Validation Jest Unit&nbsp;Testing",
+    image: "./apps/payment/release/preview.png",
+    path: "./apps/payment/release/index.html",
+    git: "https://github.com/workslist/workslist/tree/e7880fd0707b57e211795e1d8dbfad426e530bbf/apps/payment/app-full",
+    section: "/apps"
+  },
   "/project/todo": {
     title: "TODO",
     description: "JS FE BE DOM CRUD&nbsp;Operations Local&nbsp;Storage",
