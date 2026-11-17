@@ -30,7 +30,7 @@ export const apps = {
     description: "JS Form&nbsp;Validation Jest Unit&nbsp;Testing",
     image: "./apps/payment/release/preview.png",
     path: "./apps/payment/release/index.html",
-    git: "https://github.com/workslist/workslist/tree/e7880fd0707b57e211795e1d8dbfad426e530bbf/apps/payment/app-full",
+    git: "https://github.com/workslist/workslist/tree/ccf89db74e5120fdb90f8ab87ffc70cd21b63a6f/apps/payment/app-full",
     section: "/apps"
   },
   "/project/todo": {
