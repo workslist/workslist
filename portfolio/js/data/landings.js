@@ -51,6 +51,24 @@ export const landings = {
     path: "./Layout/sass/flex/skillbox/index.html",
     git: "https://github.com/workslist/workslist/tree/073569669e8a1adc92189244f3eb369c40ae1c64/Layout/sass/flex/skillbox",
     section: "/landings"
-  }
+  },
+  
+  "/project/greensock": {
+    title: "JS анимация",
+    description: "GreenSock Animation Platform",
+    image: "./Layout/greensock/preview.png",
+    path: "./Layout/greensock/index.html",
+    git: "",
+    section: "/landings"
+  },
+  
+  "/project/ticket-prices": {
+    title: "Прайс&#8209;лист",
+    description: "Table&#8209;Based Layout",
+    image: "./Layout/ticket-prices/preview.png",
+    path: "./Layout/ticket-prices/index.html",
+    git: "",
+    section: "/landings"
+  },
   
 };
