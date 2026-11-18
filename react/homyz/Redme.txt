@@ -1,0 +1,10 @@
+Видео по сборке
+https://www.youtube.com/watch?v=edBx-fjgh4k
+
+Папка проекта:
+RealEstate-web-starterpack-master
+
+Собран на vite. Для запуска:
+
+npm install - если только скачали
+npm run dev - запустить проект

@@ -5,6 +5,7 @@ import { renderHome } from "../pages/home.js";
 import { renderLandings } from "../pages/landings.js";
 import { renderEmail } from "../pages/email.js";
 import { renderApps } from "../pages/apps.js";
+import { renderReact } from "../pages/react.js";
 import { renderProject } from "../pages/project.js";
 import { projects } from "./data/projects.js";
 
@@ -16,7 +17,8 @@ const routes = {
   "/": renderHome,
   "/landings": renderLandings,
   "/emails": renderEmail,
-  "/apps": renderApps
+  "/apps": renderApps,
+  "/react": renderReact,
 }
 
 export function navigate(path, option = {}) {

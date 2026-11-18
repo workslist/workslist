@@ -12,6 +12,11 @@ export const sections = [
     description : "Table&#8209;based Inline&nbsp;CSS Responsive&nbsp;design Dark&nbsp;mode Outlook"
   },
   {
+    title: "React",
+    path: "/react",        
+    description : "JSX Components Hooks State&nbsp;Management"
+  },
+  {
     title: "Apps",
     path: "/apps",        
     description : "JavaScript DOM Event&nbsp;Handling Testing Demo&nbsp;Mode"
